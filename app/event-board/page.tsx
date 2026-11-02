@@ -39,6 +39,9 @@ export default function EventBoardPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [connected, setConnected] = useState(false);
+  const [questionText, setQuestionText] = useState("");
+  const [isSubmittingQuestion, setIsSubmittingQuestion] = useState(false);
+  const [questionMessage, setQuestionMessage] = useState("");
 
   const [voteState, setVoteState] = useState<VoteState>({
     allocations: {},
@@ -270,6 +273,60 @@ export default function EventBoardPage() {
     }
   }
 
+  async function handleSubmitQuestion(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    const text = questionText.trim();
+
+    if (!activeEventId || !text || isSubmittingQuestion) return;
+
+    setIsSubmittingQuestion(true);
+    setQuestionMessage("");
+    setError("");
+
+    try {
+      const jwt = await getAppwriteJWT();
+
+      const response = await fetch("/api/questions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${jwt}`,
+        },
+        body: JSON.stringify({
+          eventId: activeEventId,
+          text,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Could not submit your question.");
+      }
+
+      setQuestionText("");
+      setQuestionMessage(
+        result.matchedExistingCluster
+          ? "Your question was added to a similar existing question!"
+          : "Your question was submitted and added to the board!"
+      );
+
+      // Refresh participant vote state.
+      await loadVoteState(activeEventId);
+
+      // The existing cluster realtime subscription will refresh the board.
+    } catch (err) {
+      setQuestionMessage(
+        err instanceof Error
+          ? err.message
+          : "Something went wrong while submitting."
+      );
+    } finally {
+      setIsSubmittingQuestion(false);
+    }
+  }
+
   const votingOpen =
     voteState.eventStatus === "live" &&
     voteState.votingStatus === "open";
@@ -371,6 +428,47 @@ export default function EventBoardPage() {
         </div>
       )}
 
+      {activeEventId && (
+        <section className="mb-6 rounded-xl border border-white/10 bg-[#111111] p-4 shadow-sm">
+          <h2>
+            Ask a question
+          </h2>
+
+          <form onSubmit={handleSubmitQuestion} className="space-y-3">
+            <textarea
+              value={questionText}
+              onChange={(e) => {
+                setQuestionText(e.target.value);
+                setQuestionMessage("");
+              }}
+              placeholder="Type your question here..."
+              rows={3}
+              maxLength={500}
+              className="w-full resize-y rounded-lg border border-white/15 bg-[#0a0a0a] p-3 text-sm text-white placeholder:text-gray-500 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
+            />
+
+            <div className="flex items-center justify-between gap-3">
+              <span className="text-xs text-gray-400">
+                {questionText.length}/500 characters
+              </span>
+
+              <button
+                type="submit"
+                disabled={!questionText.trim() || isSubmittingQuestion || !activeEventId}
+                className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                {isSubmittingQuestion ? "Submitting..." : "Submit question"}
+              </button>
+            </div>
+
+            {questionMessage && (
+              <p className="text-sm text-gray-400">
+                {questionMessage}
+              </p>
+            )}
+          </form>
+        </section> 
+      )}
       <section className="space-y-4">
         {clusters.map((cluster, index) => {
           const hasVoted = voteState.allocations[cluster.$id] === 1;
@@ -476,3 +574,4 @@ export default function EventBoardPage() {
     </main>
   );
 }
+
