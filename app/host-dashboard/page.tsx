@@ -9,6 +9,7 @@ const databaseId =
   process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID!;
 const eventsTableId =
   process.env.NEXT_PUBLIC_APPWRITE_EVENTS_TABLE_ID!;
+  
 
 type Event = {
   $id: string;

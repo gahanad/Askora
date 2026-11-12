@@ -13,15 +13,15 @@ export type MatchResult = {
   similarity: number;
 };
 
-export function findBestMatch(
+export function findTopMatches(
   incomingVector: number[],
   existing: ExistingQuestionEmbedding[],
-  threshold = 0.85
-): MatchResult | null {
-  let bestMatch: MatchResult | null = null;
+  threshold = 0.85,
+  limit = 3
+): MatchResult[] {
+  const matches: MatchResult[] = [];
 
   for (const item of existing) {
-    // Skip malformed or incompatible vectors.
     if (
       !Array.isArray(item.vector) ||
       item.vector.length !== incomingVector.length ||
@@ -35,17 +35,16 @@ export function findBestMatch(
       item.vector
     );
 
-    if (
-      similarity >= threshold &&
-      (!bestMatch || similarity > bestMatch.similarity)
-    ) {
-      bestMatch = {
+    if (similarity >= threshold) {
+      matches.push({
         clusterId: item.clusterId,
         questionId: item.questionId,
         similarity,
-      };
+      });
     }
   }
 
-  return bestMatch;
+  return matches
+    .sort((a, b) => b.similarity - a.similarity)
+    .slice(0, limit);
 }

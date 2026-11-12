@@ -2,7 +2,7 @@
 import { Client, Account, TablesDB, ID, Query } from "appwrite";
 import { Client as NodeClient, TablesDB as NodeTablesDB } from "node-appwrite";
 import { NextRequest, NextResponse } from "next/server";
-import { findBestMatch } from "@/lib/question_matching";
+import { findTopMatches } from "@/lib/question_matching";
 
 const databaseId = process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID!;
 const eventsTableId = process.env.NEXT_PUBLIC_APPWRITE_EVENTS_TABLE_ID!;
@@ -125,12 +125,15 @@ export async function POST(request: NextRequest) {
       process.env.ASKONCE_SIMILARITY_THRESHOLD || "0.85"
     );
 
-    const match = findBestMatch(vector, candidates, threshold);
+    const matches = findTopMatches(vector, candidates, threshold);
+    const match = matches[0] ?? null;
     const requestId = ID.unique();
 
     let clusterId: string;
     let questionId: string;
     let similarity = 1;
+    let clusterStatus = "open";
+    let existingAnswer = "";
 
     if (match) {
       clusterId = match.clusterId;
@@ -138,6 +141,14 @@ export async function POST(request: NextRequest) {
 
       // Create the question first, linked to the existing cluster.
       questionId = ID.unique();
+      const cluster = await admin.getRow({
+        databaseId,
+        tableId: clustersTableId,
+        rowId: match.clusterId,
+      });
+
+      clusterStatus = String(cluster.status || "open");
+      existingAnswer = String(cluster.answerText || "");
 
       await admin.createRow({
         databaseId,
@@ -153,12 +164,6 @@ export async function POST(request: NextRequest) {
           flags: "[]",
           createdAt: new Date().toISOString(),
         },
-      });
-
-      const cluster = await admin.getRow({
-        databaseId,
-        tableId: clustersTableId,
-        rowId: clusterId,
       });
 
       await admin.updateRow({
@@ -227,6 +232,8 @@ export async function POST(request: NextRequest) {
       clusterId,
       matchedExistingCluster: Boolean(match),
       similarity,
+      clusterStatus,
+      existingAnswer,
     });
   } catch (error) {
     console.error("Question submission failed:", error);
@@ -236,4 +243,86 @@ export async function POST(request: NextRequest) {
       { status: 500 }
     );
   }
+}
+
+
+type IntentVerificationResult = {
+  sameIntent: boolean;
+  candidateIndex: number;
+};
+
+async function verifyQuestionIntent(
+  incomingQuestion: string,
+  candidateQuestions: string[]
+): Promise<IntentVerificationResult> {
+  const apiKey = process.env.GEMINI_API_KEY;
+
+  if (!apiKey) {
+    throw new Error("Missing Gemini API key.");
+  }
+
+  const { GoogleGenAI } = await import("@google/genai");
+  const ai = new GoogleGenAI({ apiKey });
+
+  const prompt = `
+You are an intent-matching assistant for a live Q&A platform.
+
+Your task is to determine whether the incoming question has
+the SAME answerable intent as one of the existing questions.
+
+Rules:
+1. Questions must require essentially the same answer.
+2. Similar topics do NOT automatically mean the same intent.
+3. Different dates, conditions, requirements, processes,
+   or requested information usually mean different intents.
+4. If none match, return sameIntent as false.
+5. Select only one best candidate.
+
+Incoming question:
+${JSON.stringify(incomingQuestion)}
+
+Existing candidate questions:
+${JSON.stringify(candidateQuestions)}
+
+Return ONLY valid JSON in this format:
+{
+  "sameIntent": true,
+  "candidateIndex": 0
+}
+
+If none match:
+{
+  "sameIntent": false,
+  "candidateIndex": -1
+}
+`;
+
+  const result = await ai.models.generateContent({
+    model: process.env.GEMINI_TEXT_MODEL || "gemini-2.5-flash",
+    contents: prompt,
+    config: {
+      responseMimeType: "application/json",
+    },
+  });
+
+  const responseText = result.text;
+
+  if (!responseText) {
+    throw new Error("Gemini returned an empty verification response.");
+  }
+
+  const parsed = JSON.parse(responseText);
+
+  if (
+    typeof parsed.sameIntent !== "boolean" ||
+    !Number.isInteger(parsed.candidateIndex) ||
+    (parsed.sameIntent &&
+      (parsed.candidateIndex < 0 ||
+        parsed.candidateIndex >= candidateQuestions.length)) ||
+    (!parsed.sameIntent && parsed.candidateIndex !== -1)
+  ) {
+    throw new Error("Gemini returned an invalid verification response.");
+  }
+
+  return parsed as IntentVerificationResult;
 }

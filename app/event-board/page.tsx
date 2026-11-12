@@ -302,15 +302,31 @@ export default function EventBoardPage() {
       const result = await response.json();
 
       if (!response.ok) {
-        throw new Error(result.error || "Could not submit your question.");
+        throw new Error(result.error || "Failed to submit question.");
+      }
+
+      if (result.matchedExistingCluster) {
+        if (result.clusterStatus === "answered") {
+          const answer =
+            typeof result.existingAnswer === "string"
+              ? result.existingAnswer.trim()
+              : "";
+
+          setQuestionMessage(
+            answer
+              ? `This question has already been answered: ${answer}`
+              : "This question has already been answered."
+          );
+        } else if (result.clusterStatus === "answering") {
+          setQuestionMessage("This question is currently being answered.");
+        } else {
+          setQuestionMessage("Your question was added to an existing question.");
+        }
+      } else {
+        setQuestionMessage("Your question was submitted successfully.");
       }
 
       setQuestionText("");
-      setQuestionMessage(
-        result.matchedExistingCluster
-          ? "Your question was added to a similar existing question!"
-          : "Your question was submitted and added to the board!"
-      );
 
       // Refresh participant vote state.
       await loadVoteState(activeEventId);

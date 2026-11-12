@@ -1,24 +1,37 @@
+
+import { describe, it, expect } from "vitest";
 import { cosineSimilarity } from "./similarity";
 
-const a = [1, 0, 0];
-const b = [0.9, 0.1, 0];
-const c = [0, 0, 1];
+describe("cosineSimilarity", () => {
+  it("returns 1 for identical vectors", () => {
+    expect(cosineSimilarity([1, 2, 3], [1, 2, 3])).toBeCloseTo(1);
+  });
 
-// Test 1: Similar vectors
-const similar = cosineSimilarity(a, b);
-console.log("Test 1 - Similar vectors:", similar);
+  it("returns 0 for orthogonal vectors", () => {
+    expect(cosineSimilarity([1, 0], [0, 1])).toBeCloseTo(0);
+  });
 
-// Test 2: Perpendicular vectors
-const different = cosineSimilarity(a, c);
-console.log("Test 2 - Different vectors:", different);
+  it("returns -1 for opposite vectors", () => {
+    expect(cosineSimilarity([1, 2], [-1, -2])).toBeCloseTo(-1);
+  });
 
-// Test 3: Identical vectors
-const identical = cosineSimilarity(a, a);
-console.log("Test 3 - Identical vectors:", identical);
+  it("handles vectors with different magnitudes", () => {
+    expect(cosineSimilarity([1, 2], [2, 4])).toBeCloseTo(1);
+  });
 
-// Assertions
-console.assert(similar > 0.9, "Similar vectors should score above 0.9");
-console.assert(Math.abs(different) < 1e-10, "Perpendicular vectors should score 0");
-console.assert(Math.abs(identical - 1) < 1e-10, "Identical vectors should score 1");
+  it("throws for vectors with different dimensions", () => {
+    expect(() => cosineSimilarity([1, 2], [1, 2, 3])).toThrow();
+  });
 
-console.log("Similarity checks completed.");
+  it("throws for empty vectors", () => {
+    expect(() => cosineSimilarity([], [])).toThrow();
+  });
+
+  it("throws for zero vectors", () => {
+    expect(() => cosineSimilarity([0, 0], [1, 2])).toThrow();
+  });
+
+  it("throws for non-finite values", () => {
+    expect(() => cosineSimilarity([1, NaN], [1, 2])).toThrow();
+  });
+});

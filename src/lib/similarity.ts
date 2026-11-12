@@ -3,7 +3,12 @@ export function cosineSimilarity(
   a: number[],
   b: number[]
 ): number {
-  if (a.length !== b.length || a.length === 0) {
+  if (
+    !Array.isArray(a) ||
+    !Array.isArray(b) ||
+    a.length !== b.length ||
+    a.length === 0
+  ) {
     throw new Error("Embeddings must have equal, non-zero dimensions.");
   }
 
@@ -12,6 +17,10 @@ export function cosineSimilarity(
   let normB = 0;
 
   for (let i = 0; i < a.length; i++) {
+    if (!Number.isFinite(a[i]) || !Number.isFinite(b[i])) {
+      throw new Error("Embeddings must contain only finite numbers.");
+    }
+
     dot += a[i] * b[i];
     normA += a[i] * a[i];
     normB += b[i] * b[i];

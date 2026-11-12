@@ -1,10 +1,10 @@
 
 import { describe, expect, it } from "vitest";
-import { findBestMatch } from "./question_matching";
+import { findTopMatches } from "./question_matching";
 
-describe("findBestMatch", () => {
-  it("matches a sufficiently similar question", () => {
-    const result = findBestMatch(
+describe("findTopMatches", () => {
+  it("returns sufficiently similar questions", () => {
+    const result = findTopMatches(
       [1, 0, 0],
       [
         {
@@ -16,11 +16,12 @@ describe("findBestMatch", () => {
       0.85
     );
 
-    expect(result?.clusterId).toBe("cluster1");
+    expect(result).toHaveLength(1);
+    expect(result[0].clusterId).toBe("cluster1");
   });
 
-  it("returns null when no question passes the threshold", () => {
-    const result = findBestMatch(
+  it("returns an empty array when no question passes the threshold", () => {
+    const result = findTopMatches(
       [1, 0, 0],
       [
         {
@@ -32,11 +33,11 @@ describe("findBestMatch", () => {
       0.85
     );
 
-    expect(result).toBeNull();
+    expect(result).toEqual([]);
   });
 
-  it("returns the highest-scoring eligible match", () => {
-    const result = findBestMatch(
+  it("returns matches sorted by highest similarity", () => {
+    const result = findTopMatches(
       [1, 0, 0],
       [
         {
@@ -53,6 +54,7 @@ describe("findBestMatch", () => {
       0.85
     );
 
-    expect(result?.clusterId).toBe("cluster2");
+    expect(result[0].clusterId).toBe("cluster2");
+    expect(result[1].clusterId).toBe("cluster1");
   });
 });

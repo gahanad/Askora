@@ -4,12 +4,14 @@
 import { useEffect, useState, Suspense } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { Query } from "appwrite";
-import { account, tablesDB, getAppwriteJWT } from "@/lib/appwrite";
+import { account, tablesDB, getAppwriteJWT, client} from "@/lib/appwrite";
+import { AppwriteException, Query } from "appwrite";
 
 const databaseId = process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID!;
 const eventsTableId = process.env.NEXT_PUBLIC_APPWRITE_EVENTS_TABLE_ID!;
 const clustersTableId = process.env.NEXT_PUBLIC_APPWRITE_CLUSTERS_TABLE_ID!;
+const questionsTableId = process.env.NEXT_PUBLIC_APPWRITE_QUESTIONS_TABLE_ID!;
+const votesTableId = process.env.NEXT_PUBLIC_APPWRITE_VOTES_TABLE_ID!;
 
 type Event = {
   $id: string;
@@ -31,6 +33,15 @@ type Cluster = {
   answerText?: string;
 };
 
+type Question = {
+  $id: string;
+  eventId: string;
+  clusterId: string;
+  text: string;
+  authorId?: string;
+  createdAt?: string;
+};
+
 type EventAction =
   | "start_voting"
   | "pause_voting"
@@ -49,6 +60,7 @@ function HostEventContent() {
   const [error, setError] = useState("");
   const [answerDrafts, setAnswerDrafts] = useState<Record<string, string>>({});
   const [answerLoadingId, setAnswerLoadingId] = useState("");
+  const [questions, setQuestions] = useState<Question[]>([]);
 
   async function loadEventData() {
     setLoading(true);
@@ -70,7 +82,12 @@ function HostEventContent() {
       }
 
       setEvent(eventData);
-
+      console.log("Logged-in Appwrite user:", user.$id);
+      console.log("Cluster query IDs:", {
+        databaseId,
+        clustersTableId,
+        eventId,
+      });
       const clusterResult = await tablesDB.listRows({
         databaseId,
         tableId: clustersTableId,
@@ -89,6 +106,17 @@ function HostEventContent() {
       );
 
       setClusters(rows);
+      const questionResult = await tablesDB.listRows({
+        databaseId,
+        tableId: questionsTableId,
+        queries: [
+          Query.equal("eventId", eventId),
+          Query.limit(100),
+        ],
+      });
+
+      setQuestions(questionResult.rows as unknown as Question[]);
+      console.log("Loaded questions:", questionResult.rows);
     } catch (err) {
       setError(
         err instanceof Error
@@ -184,6 +212,32 @@ function HostEventContent() {
     }
   }, [eventId]);
 
+  useEffect(() => {
+    if (!eventId || !event) return;
+
+    const unsubscribe = client.subscribe(
+    [
+      `databases.${databaseId}.tables.${clustersTableId}.rows`,
+      `databases.${databaseId}.tables.${questionsTableId}.rows`,
+      `databases.${databaseId}.tables.${votesTableId}.rows`,
+    ],
+    (response) => {
+      const payload = response.payload as {
+        eventId?: string;
+        clusterId?: string;
+      };
+
+      if (payload.eventId === eventId) {
+        void loadEventData();
+      }
+    }
+  );
+
+    return () => {
+      unsubscribe();
+    };
+  }, [eventId, event]);
+
   if (loading) {
     return (
       <main className="mx-auto max-w-5xl p-6">
@@ -206,6 +260,50 @@ function HostEventContent() {
   }
 
   if (!event) return null;
+
+  function getQuestionsForCluster(clusterId: string) {
+    return questions.filter(
+      (question) => question.clusterId === clusterId
+    );
+  }
+
+  async function moderateQuestion(questionId: string) {
+    const confirmed = confirm(
+      "Remove this submitted question? The cluster and its votes will remain."
+    );
+
+    if (!confirmed) return;
+
+    setError("");
+
+    try {
+      const jwt = await getAppwriteJWT();
+
+      const response = await fetch("/api/questions/moderate", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${jwt}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ questionId }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Could not remove question.");
+      }
+
+      // Reload clusters and questions after removal
+      await loadEventData();
+    } catch (err) {
+      setError(
+        err instanceof Error
+          ? err.message
+          : "Something went wrong."
+      );
+    }
+  }
 
   return (
     <main className="mx-auto max-w-5xl p-6">
@@ -390,6 +488,39 @@ function HostEventContent() {
                       </p>
                     </div>
                   </div>
+                  {/* Original questions dropdown */}
+                  <details className="mt-4 rounded-lg border border-gray-700">
+                    <summary className="cursor-pointer rounded-lg px-4 py-3 text-sm font-semibold text-gray-300 hover:bg-gray-900">
+                      Submitted questions ({getQuestionsForCluster(cluster.$id).length})
+                    </summary>
+
+                    <div className="space-y-2 border-t border-gray-700 p-3">
+                      {getQuestionsForCluster(cluster.$id).map((question) => (
+                        <div
+                          key={question.$id}
+                          className="flex items-start justify-between gap-3 rounded-md bg-gray-900 px-3 py-3"
+                        >
+                          <p className="text-sm text-gray-300">
+                            {question.text}
+                          </p>
+
+                          <button
+                            type="button"
+                            onClick={() => void moderateQuestion(question.$id)}
+                            className="shrink-0 rounded-md border border-red-500/40 px-2 py-1 text-xs text-red-400 hover:bg-red-500/10"
+                          >
+                            Remove
+                          </button>
+                        </div>
+                      ))}
+
+                      {getQuestionsForCluster(cluster.$id).length === 0 && (
+                        <p className="text-sm text-gray-500">
+                          No submitted questions found.
+                        </p>
+                      )}
+                    </div>
+                  </details>
 
                   <span className="rounded-lg bg-blue-50 px-3 py-2 text-sm font-semibold text-blue-700">
                     ▲ {cluster.voteCount ?? 0} votes

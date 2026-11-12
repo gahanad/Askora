@@ -205,7 +205,7 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    // 8. Recalculate this cluster's total credit score
+    // 8. Recalculate this cluster's vote count and credit score
     const clusterVotes = await admin.listRows({
       databaseId,
       tableId: votesTableId,
@@ -220,11 +220,17 @@ export async function POST(request: NextRequest) {
       0
     );
 
+    // Number of participants who currently have a vote on this cluster
+    const newVoteCount = clusterVotes.rows.length;
+
     await admin.updateRow({
       databaseId,
       tableId: clustersTableId,
       rowId: clusterId,
-      data: { score: newScore },
+      data: {
+        score: newScore,
+        voteCount: newVoteCount,
+      },
     });
 
     const remainingCredits =
