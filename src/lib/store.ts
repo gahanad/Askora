@@ -5,27 +5,43 @@ export type CanonicalQuestion = {
   vector: number[];
 };
 
+export type QuestionMetadata = {
+  questionId: string;
+  authorId: string;
+  requestId: string;
+  similarity: number;
+};
+
 export interface ClusterStore {
   getCanonicals(eventId: string): Promise<CanonicalQuestion[]>;
 
   createCluster(
     eventId: string,
     text: string,
-    vector: number[]
+    vector: number[],
+    metadata: QuestionMetadata
   ): Promise<string>;
 
   addToCluster(
     clusterId: string,
-    text: string
+    text: string,
+    vector: number[],
+    metadata: QuestionMetadata
   ): Promise<void>;
 }
+
+type StoredQuestion = {
+  text: string;
+  vector: number[];
+  metadata: QuestionMetadata;
+};
 
 type StoredCluster = {
   eventId: string;
   clusterId: string;
   canonicalText: string;
   vector: number[];
-  questions: string[];
+  questions: StoredQuestion[];
 };
 
 export class InMemoryStore implements ClusterStore {
@@ -37,8 +53,8 @@ export class InMemoryStore implements ClusterStore {
     eventId: string
   ): Promise<CanonicalQuestion[]> {
     return Array.from(this.clusters.values())
-      .filter((cluster) => cluster.eventId === eventId)
-      .map((cluster) => ({
+      .filter(cluster => cluster.eventId === eventId)
+      .map(cluster => ({
         clusterId: cluster.clusterId,
         text: cluster.canonicalText,
         vector: [...cluster.vector],
@@ -48,7 +64,8 @@ export class InMemoryStore implements ClusterStore {
   async createCluster(
     eventId: string,
     text: string,
-    vector: number[]
+    vector: number[],
+    metadata: QuestionMetadata
   ): Promise<string> {
     const clusterId = `cluster-${this.nextId++}`;
 
@@ -57,7 +74,13 @@ export class InMemoryStore implements ClusterStore {
       clusterId,
       canonicalText: text,
       vector: [...vector],
-      questions: [text],
+      questions: [
+        {
+          text,
+          vector: [...vector],
+          metadata,
+        },
+      ],
     });
 
     return clusterId;
@@ -65,7 +88,9 @@ export class InMemoryStore implements ClusterStore {
 
   async addToCluster(
     clusterId: string,
-    text: string
+    text: string,
+    vector: number[],
+    metadata: QuestionMetadata
   ): Promise<void> {
     const cluster = this.clusters.get(clusterId);
 
@@ -73,6 +98,10 @@ export class InMemoryStore implements ClusterStore {
       throw new Error(`Cluster ${clusterId} does not exist.`);
     }
 
-    cluster.questions.push(text);
+    cluster.questions.push({
+      text,
+      vector: [...vector],
+      metadata,
+    });
   }
 }

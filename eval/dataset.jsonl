@@ -1,0 +1,130 @@
+
+{"a":"When is the DBMS exam?","b":"What is the date of the DBMS examination?","duplicate":true,"topic":"dbms"}
+{"a":"Explain database normalization.","b":"What does normalization mean in DBMS?","duplicate":true,"topic":"dbms"}
+{"a":"What is the difference between SQL and NoSQL?","b":"How do SQL and NoSQL databases differ?","duplicate":true,"topic":"dbms"}
+{"a":"When is Assignment 3 due?","b":"What is the submission deadline for Assignment 3?","duplicate":true,"topic":"dbms"}
+{"a":"How many normal forms are included in the syllabus?","b":"What is the number of normal forms we need to study?","duplicate":true,"topic":"dbms"}
+{"a":"When is the DBMS exam?","b":"Is the DBMS exam open-book?","duplicate":false,"topic":"dbms"}
+{"a":"When is Assignment 3 due?","b":"When is Assignment 4 due?","duplicate":false,"topic":"dbms"}
+{"a":"Explain database normalization.","b":"When will the DBMS lab start?","duplicate":false,"topic":"dbms"}
+{"a":"How many normal forms are in the syllabus?","b":"What is the DBMS exam passing mark?","duplicate":false,"topic":"dbms"}
+{"a":"What is the difference between SQL and NoSQL?","b":"How do I register for the DBMS course?","duplicate":false,"topic":"dbms"}
+{"a":"When is the company town hall?","b":"How does database indexing work?","duplicate":false,"topic":"townhall"}
+{"a":"What is the product launch date?","b":"How can I submit my hackathon project?","duplicate":false,"topic":"product_ama"}
+
+{"a":"When is the company town hall?","b":"What date is the town hall scheduled for?","duplicate":true,"topic":"townhall"}
+{"a":"Who will speak at the town hall?","b":"Which people are presenting during the town hall?","duplicate":true,"topic":"townhall"}
+{"a":"Will the town hall be recorded?","b":"Can employees watch a recording of the town hall later?","duplicate":true,"topic":"townhall"}
+{"a":"How can I submit a question for the town hall?","b":"Where should I send my questions before the town hall?","duplicate":true,"topic":"townhall"}
+{"a":"When is the company town hall?","b":"Will employees be allowed to ask questions during the town hall?","duplicate":false,"topic":"townhall"}
+{"a":"Who will speak at the town hall?","b":"When will the town hall take place?","duplicate":false,"topic":"townhall"}
+{"a":"What features are included in the new product?","b":"What capabilities does the new product offer?","duplicate":true,"topic":"product_ama"}
+{"a":"When will the product launch?","b":"What is the expected release date of the product?","duplicate":true,"topic":"product_ama"}
+{"a":"How much will the product cost?","b":"What is the expected pricing of the product?","duplicate":true,"topic":"product_ama"}
+{"a":"When will the product launch?","b":"What features does the product offer?","duplicate":false,"topic":"product_ama"}
+{"a":"What is the hackathon submission deadline?","b":"Until when can teams submit their hackathon projects?","duplicate":true,"topic":"hackathon"}
+{"a":"How many members can a hackathon team have?","b":"What is the maximum team size for the hackathon?","duplicate":true,"topic":"hackathon"}
+
+{"a":"When is Assignment 2 due?","b":"How do I submit Assignment 2?","duplicate":false,"topic":"dbms"}
+{"a":"What is the DBMS exam date?","b":"What is the DBMS exam passing score?","duplicate":false,"topic":"dbms"}
+{"a":"Explain normalization in DBMS.","b":"Explain denormalization in DBMS.","duplicate":false,"topic":"dbms"}
+{"a":"When is the DBMS lab exam?","b":"What topics are included in the DBMS lab exam?","duplicate":false,"topic":"dbms"}
+{"a":"Who is presenting at the company town hall?","b":"Who is allowed to attend the company town hall?","duplicate":false,"topic":"townhall"}
+{"a":"Will the town hall be recorded?","b":"Where will the town hall recording be uploaded?","duplicate":false,"topic":"townhall"}
+{"a":"What is the product launch date?","b":"When will the product beta testing begin?","duplicate":false,"topic":"product_ama"}
+{"a":"How much does the product cost?","b":"What payment methods does the product support?","duplicate":false,"topic":"product_ama"}
+{"a":"Can the product be used offline?","b":"Does the product support multiple languages?","duplicate":false,"topic":"product_ama"}
+{"a":"What is the hackathon submission deadline?","b":"What are the judging criteria for the hackathon?","duplicate":false,"topic":"hackathon"}
+{"a":"How many people can join a hackathon team?","b":"How many projects can one team submit?","duplicate":false,"topic":"hackathon"}
+{"a":"When will hackathon results be announced?","b":"When does hackathon registration close?","duplicate":false,"topic":"hackathon"}
+
+{"a":"What is a primary key in DBMS?","b":"Explain the purpose of a primary key in a database.","duplicate":true,"topic":"dbms"}
+{"a":"What is a foreign key?","b":"Explain how foreign keys work in relational databases.","duplicate":true,"topic":"dbms"}
+{"a":"What is the difference between DELETE and TRUNCATE?","b":"How does the DELETE command differ from TRUNCATE in SQL?","duplicate":true,"topic":"dbms"}
+{"a":"What is a candidate key?","b":"Explain the meaning of candidate keys in DBMS.","duplicate":true,"topic":"dbms"}
+{"a":"Where can I watch the town hall recording?","b":"Where will the recording of the town hall be available?","duplicate":true,"topic":"townhall"}
+{"a":"Can remote employees attend the town hall?","b":"Are employees working remotely allowed to join the town hall?","duplicate":true,"topic":"townhall"}
+{"a":"Who should I contact about town hall access problems?","b":"Whom can I reach out to if I cannot access the town hall?","duplicate":true,"topic":"townhall"}
+{"a":"Does the new product support offline usage?","b":"Can I use the product without an internet connection?","duplicate":true,"topic":"product_ama"}
+{"a":"Is the product available on Android?","b":"Can Android users install and use the product?","duplicate":true,"topic":"product_ama"}
+{"a":"How can I report a bug in the product?","b":"Where should I submit product bug reports?","duplicate":true,"topic":"product_ama"}
+{"a":"Are beginners allowed to participate in the hackathon?","b":"Can people with no previous hackathon experience join?","duplicate":true,"topic":"hackathon"}
+{"a":"Will participants receive certificates?","b":"Do hackathon participants get participation certificates?","duplicate":true,"topic":"hackathon"}
+
+{"a":"Can I submit Assignment 3 late?","b":"What is the deadline for Assignment 3?","duplicate":false,"topic":"dbms"}
+{"a":"What is the passing mark for the DBMS exam?","b":"How many marks is the DBMS exam worth?","duplicate":false,"topic":"dbms"}
+{"a":"Is attendance compulsory for the DBMS lab?","b":"What is the minimum attendance percentage for the DBMS course?","duplicate":false,"topic":"dbms"}
+{"a":"Can I use PostgreSQL for the DBMS project?","b":"How do I install PostgreSQL for the DBMS project?","duplicate":false,"topic":"dbms"}
+{"a":"Will the town hall be recorded?","b":"Can employees attend the town hall remotely?","duplicate":false,"topic":"townhall"}
+{"a":"Is the town hall mandatory?","b":"Who is invited to the town hall?","duplicate":false,"topic":"townhall"}
+{"a":"Will the CEO answer employee questions?","b":"How can employees submit questions to the CEO?","duplicate":false,"topic":"townhall"}
+{"a":"Does the product support offline mode?","b":"How do I enable offline mode in the product?","duplicate":false,"topic":"product_ama"}
+{"a":"Is the product free?","b":"Does the product offer a free trial?","duplicate":false,"topic":"product_ama"}
+{"a":"When will the product launch?","b":"When will the product become available for download?","duplicate":false,"topic":"product_ama"}
+{"a":"Can beginners participate in the hackathon?","b":"Are beginners eligible to win hackathon prizes?","duplicate":false,"topic":"hackathon"}
+{"a":"What is the hackathon team size limit?","b":"Can participants change their teams after registration?","duplicate":false,"topic":"hackathon"}
+
+{"a":"Explain database normalization.","b":"What is the company's annual revenue?","duplicate":false,"topic":"dbms"}
+{"a":"What is a primary key?","b":"When will the company town hall begin?","duplicate":false,"topic":"dbms"}
+{"a":"How does SQL indexing work?","b":"What are the new product subscription plans?","duplicate":false,"topic":"dbms"}
+{"a":"Explain database transactions.","b":"Where is the hackathon venue?","duplicate":false,"topic":"dbms"}
+{"a":"When is the company town hall?","b":"How do I write a SQL JOIN query?","duplicate":false,"topic":"townhall"}
+{"a":"Who is the CEO?","b":"What is database normalization?","duplicate":false,"topic":"townhall"}
+{"a":"Will the town hall be recorded?","b":"How do I create a database backup?","duplicate":false,"topic":"townhall"}
+{"a":"What features does the new product offer?","b":"How many normal forms are there in DBMS?","duplicate":false,"topic":"product_ama"}
+{"a":"How much does the product cost?","b":"Who will judge the hackathon?","duplicate":false,"topic":"product_ama"}
+{"a":"Does the product support Android?","b":"When is the DBMS examination?","duplicate":false,"topic":"product_ama"}
+{"a":"What is the hackathon prize pool?","b":"Explain the ACID properties of database transactions.","duplicate":false,"topic":"hackathon"}
+{"a":"How do I register for the hackathon?","b":"What is the company's product roadmap?","duplicate":false,"topic":"hackathon"}
+
+{"a":"What is a foreign key used for?","b":"Why do relational databases use foreign keys?","duplicate":true,"topic":"dbms"}
+{"a":"How does a database index improve query performance?","b":"Why do indexes make database queries faster?","duplicate":true,"topic":"dbms"}
+{"a":"What happens when a transaction is rolled back?","b":"What does rolling back a database transaction do?","duplicate":true,"topic":"dbms"}
+{"a":"Who is hosting the upcoming company town hall?","b":"Which person will host the upcoming town hall meeting?","duplicate":true,"topic":"townhall"}
+{"a":"Will employees be able to ask questions live?","b":"Can staff members raise questions during the live town hall?","duplicate":true,"topic":"townhall"}
+{"a":"Where can employees find the town hall presentation slides?","b":"Where will the slides from the town hall be shared?","duplicate":true,"topic":"townhall"}
+{"a":"Can users export their data from the product?","b":"Does the product allow data export?","duplicate":true,"topic":"product_ama"}
+{"a":"Will the product have a mobile application?","b":"Is a mobile app planned for the product?","duplicate":true,"topic":"product_ama"}
+{"a":"What programming languages are allowed in the hackathon?","b":"Which programming languages can participants use during the hackathon?","duplicate":true,"topic":"hackathon"}
+{"a":"What is the hackathon registration deadline?","b":"When will hackathon registrations close?","duplicate":true,"topic":"hackathon"}
+{"a":"When will hackathon results be announced?","b":"When will the hackathon prize distribution take place?","duplicate":false,"topic":"hackathon"}
+{"a":"Can I use Python in the hackathon?","b":"Can I use Java in the hackathon?","duplicate":false,"topic":"hackathon"}
+
+{"a":"What is database normalization?","b":"Who will announce the winners of the hackathon?","duplicate":false,"topic":"dbms"}
+{"a":"Explain the difference between SQL and NoSQL.","b":"When is the company town hall scheduled?","duplicate":false,"topic":"dbms"}
+{"a":"What is a composite key?","b":"Does the new product support dark mode?","duplicate":false,"topic":"dbms"}
+{"a":"How does database indexing work?","b":"What is the hackathon prize money?","duplicate":false,"topic":"dbms"}
+{"a":"Who will present the quarterly business results?","b":"How do I write a SQL query to join two tables?","duplicate":false,"topic":"townhall"}
+{"a":"Can remote employees attend the town hall?","b":"What is the difference between DELETE and TRUNCATE?","duplicate":false,"topic":"townhall"}
+{"a":"Where can I watch the town hall recording?","b":"How do I register a team for the hackathon?","duplicate":false,"topic":"townhall"}
+{"a":"What is the product subscription price?","b":"Explain the ACID properties in DBMS.","duplicate":false,"topic":"product_ama"}
+{"a":"Will the product support multiple languages?","b":"Who is eligible to participate in the hackathon?","duplicate":false,"topic":"product_ama"}
+{"a":"When will the product launch?","b":"What topics are included in the DBMS syllabus?","duplicate":false,"topic":"product_ama"}
+{"a":"Where will the hackathon take place?","b":"Does the product have an offline mode?","duplicate":false,"topic":"hackathon"}
+{"a":"What are the hackathon judging criteria?","b":"Will the company town hall be recorded?","duplicate":false,"topic":"hackathon"}
+
+{"a":"What is a database view?","b":"When will the company announce its annual strategy?","duplicate":false,"topic":"dbms"}
+{"a":"Explain the difference between INNER JOIN and LEFT JOIN.","b":"Who will host the company town hall?","duplicate":false,"topic":"dbms"}
+{"a":"What is database normalization?","b":"How much prize money will hackathon winners receive?","duplicate":false,"topic":"dbms"}
+{"a":"What is a database transaction?","b":"Does the new product support biometric login?","duplicate":false,"topic":"dbms"}
+{"a":"When is the company town hall?","b":"How do I create a foreign key in SQL?","duplicate":false,"topic":"townhall"}
+{"a":"Who will answer employee questions at the town hall?","b":"What programming languages are allowed in the hackathon?","duplicate":false,"topic":"townhall"}
+{"a":"Will the town hall be recorded?","b":"What is the product's monthly subscription fee?","duplicate":false,"topic":"townhall"}
+{"a":"Does the product support offline access?","b":"Explain the difference between a primary key and a candidate key.","duplicate":false,"topic":"product_ama"}
+{"a":"When will the product launch?","b":"Where will the hackathon take place?","duplicate":false,"topic":"product_ama"}
+{"a":"Can users export product data?","b":"What is the DBMS examination syllabus?","duplicate":false,"topic":"product_ama"}
+{"a":"What are the hackathon judging criteria?","b":"Does the product support multiple languages?","duplicate":false,"topic":"hackathon"}
+{"a":"How many members can join a hackathon team?","b":"When is the next company town hall?","duplicate":false,"topic":"hackathon"}
+
+{"a":"What is the purpose of database normalization?","b":"Why do we normalize relational databases?","duplicate":true,"topic":"dbms"}
+{"a":"How can I access the town hall recording?","b":"Where can I view the recorded town hall session?","duplicate":true,"topic":"townhall"}
+{"a":"Does the product support two-factor authentication?","b":"Can users enable 2FA for their accounts?","duplicate":true,"topic":"product_ama"}
+{"a":"When will hackathon winners be announced?","b":"On what date will the hackathon results be declared?","duplicate":true,"topic":"hackathon"}
+{"a":"What is a database schema?","b":"Who will present at the company town hall?","duplicate":false,"topic":"dbms"}
+{"a":"Explain SQL aggregate functions.","b":"How much does the new product cost?","duplicate":false,"topic":"dbms"}
+{"a":"What is a database index?","b":"Where can I register for the hackathon?","duplicate":false,"topic":"dbms"}
+{"a":"Who is hosting the town hall?","b":"What is the difference between SQL and NoSQL?","duplicate":false,"topic":"townhall"}
+{"a":"Will the town hall be recorded?","b":"Does the product support dark mode?","duplicate":false,"topic":"townhall"}
+{"a":"What are the product's main features?","b":"How many normal forms are covered in DBMS?","duplicate":false,"topic":"product_ama"}
+{"a":"Can I use the product on Android?","b":"Who is eligible to participate in the hackathon?","duplicate":false,"topic":"product_ama"}
+{"a":"What are the hackathon judging criteria?","b":"How do database transactions work?","duplicate":false,"topic":"hackathon"}

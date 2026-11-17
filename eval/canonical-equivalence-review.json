@@ -1,0 +1,834 @@
+[
+  {
+    "topic": "hackathon",
+    "question1": {
+      "clusterId": "cluster-34",
+      "text": "How many people can join a hackathon team?"
+    },
+    "question2": {
+      "clusterId": "cluster-107",
+      "text": "How many members can join a hackathon team?"
+    },
+    "score": 0.9893,
+    "sameIntent": true
+  },
+  {
+    "topic": "dbms",
+    "question1": {
+      "clusterId": "cluster-4",
+      "text": "How many normal forms are included in the syllabus?"
+    },
+    "question2": {
+      "clusterId": "cluster-8",
+      "text": "How many normal forms are in the syllabus?"
+    },
+    "score": 0.9851,
+    "sameIntent": true
+  },
+  {
+    "topic": "hackathon",
+    "question1": {
+      "clusterId": "cluster-23",
+      "text": "How many members can a hackathon team have?"
+    },
+    "question2": {
+      "clusterId": "cluster-107",
+      "text": "How many members can join a hackathon team?"
+    },
+    "score": 0.985,
+    "sameIntent": true
+  },
+  {
+    "topic": "hackathon",
+    "question1": {
+      "clusterId": "cluster-46",
+      "text": "Are beginners allowed to participate in the hackathon?"
+    },
+    "question2": {
+      "clusterId": "cluster-58",
+      "text": "Can beginners participate in the hackathon?"
+    },
+    "score": 0.985,
+    "sameIntent": true
+  },
+  {
+    "topic": "dbms",
+    "question1": {
+      "clusterId": "cluster-0",
+      "text": "When is the DBMS exam?"
+    },
+    "question2": {
+      "clusterId": "cluster-25",
+      "text": "What is the DBMS exam date?"
+    },
+    "score": 0.9788,
+    "sameIntent": true
+  },
+  {
+    "topic": "hackathon",
+    "question1": {
+      "clusterId": "cluster-23",
+      "text": "How many members can a hackathon team have?"
+    },
+    "question2": {
+      "clusterId": "cluster-34",
+      "text": "How many people can join a hackathon team?"
+    },
+    "score": 0.9764,
+    "sameIntent": true
+  },
+  {
+    "topic": "hackathon",
+    "question1": {
+      "clusterId": "cluster-35",
+      "text": "When will hackathon results be announced?"
+    },
+    "question2": {
+      "clusterId": "cluster-111",
+      "text": "When will hackathon winners be announced?"
+    },
+    "score": 0.974,
+    "sameIntent": false
+  },
+  {
+    "topic": "dbms",
+    "question1": {
+      "clusterId": "cluster-2",
+      "text": "What is the difference between SQL and NoSQL?"
+    },
+    "question2": {
+      "clusterId": "cluster-85",
+      "text": "Explain the difference between SQL and NoSQL."
+    },
+    "score": 0.9707,
+    "sameIntent": true
+  },
+  {
+    "topic": "product_ama",
+    "question1": {
+      "clusterId": "cluster-18",
+      "text": "What features are included in the new product?"
+    },
+    "question2": {
+      "clusterId": "cluster-67",
+      "text": "What features does the new product offer?"
+    },
+    "score": 0.9677,
+    "sameIntent": true
+  },
+  {
+    "topic": "product_ama",
+    "question1": {
+      "clusterId": "cluster-55",
+      "text": "Does the product support offline mode?"
+    },
+    "question2": {
+      "clusterId": "cluster-103",
+      "text": "Does the product support offline access?"
+    },
+    "score": 0.9643,
+    "sameIntent": true
+  },
+  {
+    "topic": "townhall",
+    "question1": {
+      "clusterId": "cluster-40",
+      "text": "Where can I watch the town hall recording?"
+    },
+    "question2": {
+      "clusterId": "cluster-109",
+      "text": "How can I access the town hall recording?"
+    },
+    "score": 0.9629,
+    "sameIntent": true
+  },
+  {
+    "topic": "product_ama",
+    "question1": {
+      "clusterId": "cluster-32",
+      "text": "Can the product be used offline?"
+    },
+    "question2": {
+      "clusterId": "cluster-55",
+      "text": "Does the product support offline mode?"
+    },
+    "score": 0.96,
+    "sameIntent": true
+  },
+  {
+    "topic": "dbms",
+    "question1": {
+      "clusterId": "cluster-37",
+      "text": "What is a foreign key?"
+    },
+    "question2": {
+      "clusterId": "cluster-72",
+      "text": "What is a foreign key used for?"
+    },
+    "score": 0.9567,
+    "sameIntent": true
+  },
+  {
+    "topic": "hackathon",
+    "question1": {
+      "clusterId": "cluster-23",
+      "text": "How many members can a hackathon team have?"
+    },
+    "question2": {
+      "clusterId": "cluster-59",
+      "text": "What is the hackathon team size limit?"
+    },
+    "score": 0.9564,
+    "sameIntent": true
+  },
+  {
+    "topic": "dbms",
+    "question1": {
+      "clusterId": "cluster-1",
+      "text": "Explain database normalization."
+    },
+    "question2": {
+      "clusterId": "cluster-84",
+      "text": "What is database normalization?"
+    },
+    "score": 0.9504,
+    "sameIntent": true
+  },
+  {
+    "topic": "product_ama",
+    "question1": {
+      "clusterId": "cluster-44",
+      "text": "Is the product available on Android?"
+    },
+    "question2": {
+      "clusterId": "cluster-118",
+      "text": "Can I use the product on Android?"
+    },
+    "score": 0.95,
+    "sameIntent": true
+  },
+  {
+    "topic": "hackathon",
+    "question1": {
+      "clusterId": "cluster-59",
+      "text": "What is the hackathon team size limit?"
+    },
+    "question2": {
+      "clusterId": "cluster-107",
+      "text": "How many members can join a hackathon team?"
+    },
+    "score": 0.9497,
+    "sameIntent": true
+  },
+  {
+    "topic": "dbms",
+    "question1": {
+      "clusterId": "cluster-0",
+      "text": "When is the DBMS exam?"
+    },
+    "question2": {
+      "clusterId": "cluster-27",
+      "text": "When is the DBMS lab exam?"
+    },
+    "score": 0.9485,
+    "sameIntent": false
+  },
+  {
+    "topic": "hackathon",
+    "question1": {
+      "clusterId": "cluster-34",
+      "text": "How many people can join a hackathon team?"
+    },
+    "question2": {
+      "clusterId": "cluster-59",
+      "text": "What is the hackathon team size limit?"
+    },
+    "score": 0.9472,
+    "sameIntent": true
+  },
+  {
+    "topic": "product_ama",
+    "question1": {
+      "clusterId": "cluster-20",
+      "text": "How much will the product cost?"
+    },
+    "question2": {
+      "clusterId": "cluster-31",
+      "text": "How much does the product cost?"
+    },
+    "score": 0.9463,
+    "sameIntent": true
+  },
+  {
+    "topic": "product_ama",
+    "question1": {
+      "clusterId": "cluster-11",
+      "text": "What is the product launch date?"
+    },
+    "question2": {
+      "clusterId": "cluster-19",
+      "text": "When will the product launch?"
+    },
+    "score": 0.945,
+    "sameIntent": true
+  },
+  {
+    "topic": "product_ama",
+    "question1": {
+      "clusterId": "cluster-43",
+      "text": "Does the new product support offline usage?"
+    },
+    "question2": {
+      "clusterId": "cluster-55",
+      "text": "Does the product support offline mode?"
+    },
+    "score": 0.9436,
+    "sameIntent": true
+  },
+  {
+    "topic": "townhall",
+    "question1": {
+      "clusterId": "cluster-28",
+      "text": "Who is presenting at the company town hall?"
+    },
+    "question2": {
+      "clusterId": "cluster-75",
+      "text": "Who is hosting the upcoming company town hall?"
+    },
+    "score": 0.9408,
+    "sameIntent": false
+  },
+  {
+    "topic": "product_ama",
+    "question1": {
+      "clusterId": "cluster-69",
+      "text": "Does the product support Android?"
+    },
+    "question2": {
+      "clusterId": "cluster-118",
+      "text": "Can I use the product on Android?"
+    },
+    "score": 0.9395,
+    "sameIntent": true
+  },
+  {
+    "topic": "product_ama",
+    "question1": {
+      "clusterId": "cluster-32",
+      "text": "Can the product be used offline?"
+    },
+    "question2": {
+      "clusterId": "cluster-103",
+      "text": "Does the product support offline access?"
+    },
+    "score": 0.9369,
+    "sameIntent": true
+  },
+  {
+    "topic": "dbms",
+    "question1": {
+      "clusterId": "cluster-1",
+      "text": "Explain database normalization."
+    },
+    "question2": {
+      "clusterId": "cluster-26",
+      "text": "Explain normalization in DBMS."
+    },
+    "score": 0.9352,
+    "sameIntent": true
+  },
+  {
+    "topic": "dbms",
+    "question1": {
+      "clusterId": "cluster-25",
+      "text": "What is the DBMS exam date?"
+    },
+    "question2": {
+      "clusterId": "cluster-27",
+      "text": "When is the DBMS lab exam?"
+    },
+    "score": 0.9345,
+    "sameIntent": false
+  },
+  {
+    "topic": "product_ama",
+    "question1": {
+      "clusterId": "cluster-43",
+      "text": "Does the new product support offline usage?"
+    },
+    "question2": {
+      "clusterId": "cluster-103",
+      "text": "Does the product support offline access?"
+    },
+    "score": 0.9298,
+    "sameIntent": true
+  },
+  {
+    "topic": "dbms",
+    "question1": {
+      "clusterId": "cluster-87",
+      "text": "How does database indexing work?"
+    },
+    "question2": {
+      "clusterId": "cluster-114",
+      "text": "What is a database index?"
+    },
+    "score": 0.9295,
+    "sameIntent": true
+  },
+  {
+    "topic": "dbms",
+    "question1": {
+      "clusterId": "cluster-62",
+      "text": "How does SQL indexing work?"
+    },
+    "question2": {
+      "clusterId": "cluster-87",
+      "text": "How does database indexing work?"
+    },
+    "score": 0.9281,
+    "sameIntent": false
+  },
+  {
+    "topic": "product_ama",
+    "question1": {
+      "clusterId": "cluster-44",
+      "text": "Is the product available on Android?"
+    },
+    "question2": {
+      "clusterId": "cluster-69",
+      "text": "Does the product support Android?"
+    },
+    "score": 0.927,
+    "sameIntent": true
+  },
+  {
+    "topic": "dbms",
+    "question1": {
+      "clusterId": "cluster-63",
+      "text": "Explain database transactions."
+    },
+    "question2": {
+      "clusterId": "cluster-99",
+      "text": "What is a database transaction?"
+    },
+    "score": 0.9261,
+    "sameIntent": true
+  },
+  {
+    "topic": "dbms",
+    "question1": {
+      "clusterId": "cluster-84",
+      "text": "What is database normalization?"
+    },
+    "question2": {
+      "clusterId": "cluster-108",
+      "text": "What is the purpose of database normalization?"
+    },
+    "score": 0.9244,
+    "sameIntent": false
+  },
+  {
+    "topic": "townhall",
+    "question1": {
+      "clusterId": "cluster-14",
+      "text": "Will the town hall be recorded?"
+    },
+    "question2": {
+      "clusterId": "cluster-40",
+      "text": "Where can I watch the town hall recording?"
+    },
+    "score": 0.9218,
+    "sameIntent": false
+  },
+  {
+    "topic": "dbms",
+    "question1": {
+      "clusterId": "cluster-36",
+      "text": "What is a primary key in DBMS?"
+    },
+    "question2": {
+      "clusterId": "cluster-61",
+      "text": "What is a primary key?"
+    },
+    "score": 0.9206,
+    "sameIntent": true
+  },
+  {
+    "topic": "product_ama",
+    "question1": {
+      "clusterId": "cluster-32",
+      "text": "Can the product be used offline?"
+    },
+    "question2": {
+      "clusterId": "cluster-43",
+      "text": "Does the new product support offline usage?"
+    },
+    "score": 0.9197,
+    "sameIntent": true
+  },
+  {
+    "topic": "hackathon",
+    "question1": {
+      "clusterId": "cluster-22",
+      "text": "What is the hackathon submission deadline?"
+    },
+    "question2": {
+      "clusterId": "cluster-81",
+      "text": "What is the hackathon registration deadline?"
+    },
+    "score": 0.9196,
+    "sameIntent": false
+  },
+  {
+    "topic": "dbms",
+    "question1": {
+      "clusterId": "cluster-3",
+      "text": "When is Assignment 3 due?"
+    },
+    "question2": {
+      "clusterId": "cluster-24",
+      "text": "When is Assignment 2 due?"
+    },
+    "score": 0.9177,
+    "sameIntent": false
+  },
+  {
+    "topic": "dbms",
+    "question1": {
+      "clusterId": "cluster-73",
+      "text": "How does a database index improve query performance?"
+    },
+    "question2": {
+      "clusterId": "cluster-87",
+      "text": "How does database indexing work?"
+    },
+    "score": 0.9176,
+    "sameIntent": false
+  },
+  {
+    "topic": "townhall",
+    "question1": {
+      "clusterId": "cluster-14",
+      "text": "Will the town hall be recorded?"
+    },
+    "question2": {
+      "clusterId": "cluster-109",
+      "text": "How can I access the town hall recording?"
+    },
+    "score": 0.9135,
+    "sameIntent": false
+  },
+  {
+    "topic": "hackathon",
+    "question1": {
+      "clusterId": "cluster-80",
+      "text": "What programming languages are allowed in the hackathon?"
+    },
+    "question2": {
+      "clusterId": "cluster-83",
+      "text": "Can I use Python in the hackathon?"
+    },
+    "score": 0.9112,
+    "sameIntent": false
+  },
+  {
+    "topic": "dbms",
+    "question1": {
+      "clusterId": "cluster-26",
+      "text": "Explain normalization in DBMS."
+    },
+    "question2": {
+      "clusterId": "cluster-84",
+      "text": "What is database normalization?"
+    },
+    "score": 0.9004,
+    "sameIntent": true
+  },
+  {
+    "topic": "dbms",
+    "question1": {
+      "clusterId": "cluster-73",
+      "text": "How does a database index improve query performance?"
+    },
+    "question2": {
+      "clusterId": "cluster-114",
+      "text": "What is a database index?"
+    },
+    "score": 0.8956,
+    "sameIntent": false
+  },
+  {
+    "topic": "product_ama",
+    "question1": {
+      "clusterId": "cluster-78",
+      "text": "Can users export their data from the product?"
+    },
+    "question2": {
+      "clusterId": "cluster-105",
+      "text": "Can users export product data?"
+    },
+    "score": 0.8925,
+    "sameIntent": false
+  },
+  {
+    "topic": "townhall",
+    "question1": {
+      "clusterId": "cluster-75",
+      "text": "Who is hosting the upcoming company town hall?"
+    },
+    "question2": {
+      "clusterId": "cluster-115",
+      "text": "Who is hosting the town hall?"
+    },
+    "score": 0.8913,
+    "sameIntent": true
+  },
+  {
+    "topic": "dbms",
+    "question1": {
+      "clusterId": "cluster-1",
+      "text": "Explain database normalization."
+    },
+    "question2": {
+      "clusterId": "cluster-108",
+      "text": "What is the purpose of database normalization?"
+    },
+    "score": 0.8882,
+    "sameIntent": false
+  },
+  {
+    "topic": "townhall",
+    "question1": {
+      "clusterId": "cluster-13",
+      "text": "Who will speak at the town hall?"
+    },
+    "question2": {
+      "clusterId": "cluster-115",
+      "text": "Who is hosting the town hall?"
+    },
+    "score": 0.8848,
+    "sameIntent": false
+  },
+  {
+    "topic": "hackathon",
+    "question1": {
+      "clusterId": "cluster-71",
+      "text": "How do I register for the hackathon?"
+    },
+    "question2": {
+      "clusterId": "cluster-81",
+      "text": "What is the hackathon registration deadline?"
+    },
+    "score": 0.8812,
+    "sameIntent": false
+  },
+  {
+    "topic": "dbms",
+    "question1": {
+      "clusterId": "cluster-37",
+      "text": "What is a foreign key?"
+    },
+    "question2": {
+      "clusterId": "cluster-61",
+      "text": "What is a primary key?"
+    },
+    "score": 0.877,
+    "sameIntent": false
+  },
+  {
+    "topic": "product_ama",
+    "question1": {
+      "clusterId": "cluster-31",
+      "text": "How much does the product cost?"
+    },
+    "question2": {
+      "clusterId": "cluster-91",
+      "text": "What is the product subscription price?"
+    },
+    "score": 0.875,
+    "sameIntent": true
+  },
+  {
+    "topic": "product_ama",
+    "question1": {
+      "clusterId": "cluster-67",
+      "text": "What features does the new product offer?"
+    },
+    "question2": {
+      "clusterId": "cluster-117",
+      "text": "What are the product's main features?"
+    },
+    "score": 0.8732,
+    "sameIntent": true
+  },
+  {
+    "topic": "dbms",
+    "question1": {
+      "clusterId": "cluster-62",
+      "text": "How does SQL indexing work?"
+    },
+    "question2": {
+      "clusterId": "cluster-114",
+      "text": "What is a database index?"
+    },
+    "score": 0.869,
+    "sameIntent": false
+  },
+  {
+    "topic": "dbms",
+    "question1": {
+      "clusterId": "cluster-3",
+      "text": "When is Assignment 3 due?"
+    },
+    "question2": {
+      "clusterId": "cluster-48",
+      "text": "Can I submit Assignment 3 late?"
+    },
+    "score": 0.8674,
+    "sameIntent": false
+  },
+  {
+    "topic": "dbms",
+    "question1": {
+      "clusterId": "cluster-62",
+      "text": "How does SQL indexing work?"
+    },
+    "question2": {
+      "clusterId": "cluster-73",
+      "text": "How does a database index improve query performance?"
+    },
+    "score": 0.866,
+    "sameIntent": true
+  },
+  {
+    "topic": "townhall",
+    "question1": {
+      "clusterId": "cluster-75",
+      "text": "Who is hosting the upcoming company town hall?"
+    },
+    "question2": {
+      "clusterId": "cluster-101",
+      "text": "Who will answer employee questions at the town hall?"
+    },
+    "score": 0.8656,
+    "sameIntent": false
+  },
+  {
+    "topic": "townhall",
+    "question1": {
+      "clusterId": "cluster-28",
+      "text": "Who is presenting at the company town hall?"
+    },
+    "question2": {
+      "clusterId": "cluster-101",
+      "text": "Who will answer employee questions at the town hall?"
+    },
+    "score": 0.8651,
+    "sameIntent": false
+  },
+  {
+    "topic": "product_ama",
+    "question1": {
+      "clusterId": "cluster-18",
+      "text": "What features are included in the new product?"
+    },
+    "question2": {
+      "clusterId": "cluster-117",
+      "text": "What are the product's main features?"
+    },
+    "score": 0.8651,
+    "sameIntent": true
+  },
+  {
+    "topic": "townhall",
+    "question1": {
+      "clusterId": "cluster-13",
+      "text": "Who will speak at the town hall?"
+    },
+    "question2": {
+      "clusterId": "cluster-28",
+      "text": "Who is presenting at the company town hall?"
+    },
+    "score": 0.8644,
+    "sameIntent": true
+  },
+  {
+    "topic": "townhall",
+    "question1": {
+      "clusterId": "cluster-54",
+      "text": "Will the CEO answer employee questions?"
+    },
+    "question2": {
+      "clusterId": "cluster-101",
+      "text": "Who will answer employee questions at the town hall?"
+    },
+    "score": 0.8574,
+    "sameIntent": false
+  },
+  {
+    "topic": "townhall",
+    "question1": {
+      "clusterId": "cluster-13",
+      "text": "Who will speak at the town hall?"
+    },
+    "question2": {
+      "clusterId": "cluster-101",
+      "text": "Who will answer employee questions at the town hall?"
+    },
+    "score": 0.8557,
+    "sameIntent": false
+  },
+  {
+    "topic": "townhall",
+    "question1": {
+      "clusterId": "cluster-10",
+      "text": "When is the company town hall?"
+    },
+    "question2": {
+      "clusterId": "cluster-75",
+      "text": "Who is hosting the upcoming company town hall?"
+    },
+    "score": 0.8549,
+    "sameIntent": false
+  },
+  {
+    "topic": "townhall",
+    "question1": {
+      "clusterId": "cluster-54",
+      "text": "Will the CEO answer employee questions?"
+    },
+    "question2": {
+      "clusterId": "cluster-76",
+      "text": "Will employees be able to ask questions live?"
+    },
+    "score": 0.8545,
+    "sameIntent": false
+  },
+  {
+    "topic": "townhall",
+    "question1": {
+      "clusterId": "cluster-10",
+      "text": "When is the company town hall?"
+    },
+    "question2": {
+      "clusterId": "cluster-28",
+      "text": "Who is presenting at the company town hall?"
+    },
+    "score": 0.8533,
+    "sameIntent": false
+  },
+  {
+    "topic": "dbms",
+    "question1": {
+      "clusterId": "cluster-61",
+      "text": "What is a primary key?"
+    },
+    "question2": {
+      "clusterId": "cluster-86",
+      "text": "What is a composite key?"
+    },
+    "score": 0.8503,
+    "sameIntent": false
+  }
+]

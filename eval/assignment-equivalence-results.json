@@ -1,0 +1,405 @@
+{
+  "totalCases": 120,
+  "matchedCases": 49,
+  "equivalenceGroups": 19,
+  "exactCorrect": 37,
+  "equivalenceOnlyCorrect": 11,
+  "equivalenceCorrect": 48,
+  "incorrect": 1,
+  "exactClusterAccuracy": 75.51,
+  "equivalenceAwareClusterAccuracy": 97.96,
+  "cases": [
+    {
+      "pairIndex": 0,
+      "topic": "dbms",
+      "expectedClusterId": "cluster-0",
+      "predictedClusterId": "cluster-25",
+      "exactMatch": false,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 1,
+      "topic": "dbms",
+      "expectedClusterId": "cluster-1",
+      "predictedClusterId": "cluster-26",
+      "exactMatch": false,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 2,
+      "topic": "dbms",
+      "expectedClusterId": "cluster-2",
+      "predictedClusterId": "cluster-2",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 3,
+      "topic": "dbms",
+      "expectedClusterId": "cluster-3",
+      "predictedClusterId": "cluster-3",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 4,
+      "topic": "dbms",
+      "expectedClusterId": "cluster-4",
+      "predictedClusterId": "cluster-8",
+      "exactMatch": false,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 8,
+      "topic": "dbms",
+      "expectedClusterId": "cluster-49",
+      "predictedClusterId": "cluster-49",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 12,
+      "topic": "townhall",
+      "expectedClusterId": "cluster-10",
+      "predictedClusterId": "cluster-10",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 13,
+      "topic": "townhall",
+      "expectedClusterId": "cluster-13",
+      "predictedClusterId": "cluster-28",
+      "exactMatch": false,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 15,
+      "topic": "townhall",
+      "expectedClusterId": "cluster-15",
+      "predictedClusterId": "cluster-15",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 16,
+      "topic": "townhall",
+      "expectedClusterId": "cluster-76",
+      "predictedClusterId": "cluster-76",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 17,
+      "topic": "townhall",
+      "expectedClusterId": "cluster-10",
+      "predictedClusterId": "cluster-10",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 18,
+      "topic": "product_ama",
+      "expectedClusterId": "cluster-18",
+      "predictedClusterId": "cluster-67",
+      "exactMatch": false,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 19,
+      "topic": "product_ama",
+      "expectedClusterId": "cluster-19",
+      "predictedClusterId": "cluster-11",
+      "exactMatch": false,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 20,
+      "topic": "product_ama",
+      "expectedClusterId": "cluster-20",
+      "predictedClusterId": "cluster-20",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 21,
+      "topic": "product_ama",
+      "expectedClusterId": "cluster-117",
+      "predictedClusterId": "cluster-117",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 22,
+      "topic": "hackathon",
+      "expectedClusterId": "cluster-22",
+      "predictedClusterId": "cluster-22",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 23,
+      "topic": "hackathon",
+      "expectedClusterId": "cluster-23",
+      "predictedClusterId": "cluster-59",
+      "exactMatch": false,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 25,
+      "topic": "dbms",
+      "expectedClusterId": "cluster-49",
+      "predictedClusterId": "cluster-49",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 29,
+      "topic": "townhall",
+      "expectedClusterId": "cluster-40",
+      "predictedClusterId": "cluster-40",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 32,
+      "topic": "product_ama",
+      "expectedClusterId": "cluster-92",
+      "predictedClusterId": "cluster-92",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 33,
+      "topic": "hackathon",
+      "expectedClusterId": "cluster-95",
+      "predictedClusterId": "cluster-95",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 35,
+      "topic": "hackathon",
+      "expectedClusterId": "cluster-81",
+      "predictedClusterId": "cluster-81",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 36,
+      "topic": "dbms",
+      "expectedClusterId": "cluster-36",
+      "predictedClusterId": "cluster-61",
+      "exactMatch": false,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 37,
+      "topic": "dbms",
+      "expectedClusterId": "cluster-37",
+      "predictedClusterId": "cluster-37",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 38,
+      "topic": "dbms",
+      "expectedClusterId": "cluster-38",
+      "predictedClusterId": "cluster-38",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 39,
+      "topic": "dbms",
+      "expectedClusterId": "cluster-39",
+      "predictedClusterId": "cluster-39",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 40,
+      "topic": "townhall",
+      "expectedClusterId": "cluster-40",
+      "predictedClusterId": "cluster-40",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 41,
+      "topic": "townhall",
+      "expectedClusterId": "cluster-41",
+      "predictedClusterId": "cluster-41",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 42,
+      "topic": "townhall",
+      "expectedClusterId": "cluster-42",
+      "predictedClusterId": "cluster-42",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 43,
+      "topic": "product_ama",
+      "expectedClusterId": "cluster-43",
+      "predictedClusterId": "cluster-32",
+      "exactMatch": false,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 44,
+      "topic": "product_ama",
+      "expectedClusterId": "cluster-44",
+      "predictedClusterId": "cluster-118",
+      "exactMatch": false,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 45,
+      "topic": "product_ama",
+      "expectedClusterId": "cluster-45",
+      "predictedClusterId": "cluster-45",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 46,
+      "topic": "hackathon",
+      "expectedClusterId": "cluster-46",
+      "predictedClusterId": "cluster-46",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 47,
+      "topic": "hackathon",
+      "expectedClusterId": "cluster-47",
+      "predictedClusterId": "cluster-47",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 48,
+      "topic": "dbms",
+      "expectedClusterId": "cluster-3",
+      "predictedClusterId": "cluster-3",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 72,
+      "topic": "dbms",
+      "expectedClusterId": "cluster-72",
+      "predictedClusterId": "cluster-72",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 73,
+      "topic": "dbms",
+      "expectedClusterId": "cluster-73",
+      "predictedClusterId": "cluster-73",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 74,
+      "topic": "dbms",
+      "expectedClusterId": "cluster-74",
+      "predictedClusterId": "cluster-74",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 75,
+      "topic": "townhall",
+      "expectedClusterId": "cluster-75",
+      "predictedClusterId": "cluster-75",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 76,
+      "topic": "townhall",
+      "expectedClusterId": "cluster-76",
+      "predictedClusterId": "cluster-76",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 77,
+      "topic": "townhall",
+      "expectedClusterId": "cluster-77",
+      "predictedClusterId": "cluster-77",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 78,
+      "topic": "product_ama",
+      "expectedClusterId": "cluster-78",
+      "predictedClusterId": "cluster-78",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 79,
+      "topic": "product_ama",
+      "expectedClusterId": "cluster-79",
+      "predictedClusterId": "cluster-79",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 80,
+      "topic": "hackathon",
+      "expectedClusterId": "cluster-80",
+      "predictedClusterId": "cluster-80",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 81,
+      "topic": "hackathon",
+      "expectedClusterId": "cluster-81",
+      "predictedClusterId": "cluster-81",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 108,
+      "topic": "dbms",
+      "expectedClusterId": "cluster-108",
+      "predictedClusterId": "cluster-108",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 109,
+      "topic": "townhall",
+      "expectedClusterId": "cluster-109",
+      "predictedClusterId": "cluster-40",
+      "exactMatch": false,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 110,
+      "topic": "product_ama",
+      "expectedClusterId": "cluster-110",
+      "predictedClusterId": "cluster-110",
+      "exactMatch": true,
+      "equivalenceMatch": true
+    },
+    {
+      "pairIndex": 111,
+      "topic": "hackathon",
+      "expectedClusterId": "cluster-111",
+      "predictedClusterId": "cluster-35",
+      "exactMatch": false,
+      "equivalenceMatch": false
+    }
+  ]
+}

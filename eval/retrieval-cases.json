@@ -1,0 +1,2756 @@
+[
+  {
+    "pairIndex": 0,
+    "topic": "dbms",
+    "incomingQuestion": "What is the date of the DBMS examination?",
+    "expectedClusterId": "cluster-0",
+    "candidates": [
+      {
+        "clusterId": "cluster-25",
+        "text": "What is the DBMS exam date?",
+        "score": 0.9800204530741102
+      },
+      {
+        "clusterId": "cluster-0",
+        "text": "When is the DBMS exam?",
+        "score": 0.9739115956444752
+      },
+      {
+        "clusterId": "cluster-27",
+        "text": "When is the DBMS lab exam?",
+        "score": 0.9313571681646479
+      },
+      {
+        "clusterId": "cluster-49",
+        "text": "What is the passing mark for the DBMS exam?",
+        "score": 0.8419909843722514
+      },
+      {
+        "clusterId": "cluster-50",
+        "text": "Is attendance compulsory for the DBMS lab?",
+        "score": 0.7844055694622318
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 1,
+    "topic": "dbms",
+    "incomingQuestion": "What does normalization mean in DBMS?",
+    "expectedClusterId": "cluster-1",
+    "candidates": [
+      {
+        "clusterId": "cluster-26",
+        "text": "Explain normalization in DBMS.",
+        "score": 0.9405613366728357
+      },
+      {
+        "clusterId": "cluster-84",
+        "text": "What is database normalization?",
+        "score": 0.9244575102703516
+      },
+      {
+        "clusterId": "cluster-1",
+        "text": "Explain database normalization.",
+        "score": 0.8958423037180844
+      },
+      {
+        "clusterId": "cluster-108",
+        "text": "What is the purpose of database normalization?",
+        "score": 0.8725024710869028
+      },
+      {
+        "clusterId": "cluster-36",
+        "text": "What is a primary key in DBMS?",
+        "score": 0.8038464000441564
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 2,
+    "topic": "dbms",
+    "incomingQuestion": "How do SQL and NoSQL databases differ?",
+    "expectedClusterId": "cluster-2",
+    "candidates": [
+      {
+        "clusterId": "cluster-2",
+        "text": "What is the difference between SQL and NoSQL?",
+        "score": 0.9653087274576142
+      },
+      {
+        "clusterId": "cluster-85",
+        "text": "Explain the difference between SQL and NoSQL.",
+        "score": 0.9501581706122361
+      },
+      {
+        "clusterId": "cluster-62",
+        "text": "How does SQL indexing work?",
+        "score": 0.7637569145003519
+      },
+      {
+        "clusterId": "cluster-112",
+        "text": "What is a database schema?",
+        "score": 0.7489751564672739
+      },
+      {
+        "clusterId": "cluster-38",
+        "text": "What is the difference between DELETE and TRUNCATE?",
+        "score": 0.7439288786801997
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 3,
+    "topic": "dbms",
+    "incomingQuestion": "What is the submission deadline for Assignment 3?",
+    "expectedClusterId": "cluster-3",
+    "candidates": [
+      {
+        "clusterId": "cluster-3",
+        "text": "When is Assignment 3 due?",
+        "score": 0.9616492757174633
+      },
+      {
+        "clusterId": "cluster-24",
+        "text": "When is Assignment 2 due?",
+        "score": 0.8723897575516228
+      },
+      {
+        "clusterId": "cluster-48",
+        "text": "Can I submit Assignment 3 late?",
+        "score": 0.8673472482838938
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 4,
+    "topic": "dbms",
+    "incomingQuestion": "What is the number of normal forms we need to study?",
+    "expectedClusterId": "cluster-4",
+    "candidates": [
+      {
+        "clusterId": "cluster-8",
+        "text": "How many normal forms are in the syllabus?",
+        "score": 0.8210328396273758
+      },
+      {
+        "clusterId": "cluster-4",
+        "text": "How many normal forms are included in the syllabus?",
+        "score": 0.8202092718530823
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 5,
+    "topic": "dbms",
+    "incomingQuestion": "Is the DBMS exam open-book?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-0",
+        "text": "When is the DBMS exam?",
+        "score": 0.866610063690928
+      },
+      {
+        "clusterId": "cluster-25",
+        "text": "What is the DBMS exam date?",
+        "score": 0.8496719542711437
+      },
+      {
+        "clusterId": "cluster-27",
+        "text": "When is the DBMS lab exam?",
+        "score": 0.8358397048515462
+      },
+      {
+        "clusterId": "cluster-49",
+        "text": "What is the passing mark for the DBMS exam?",
+        "score": 0.8273868948020959
+      },
+      {
+        "clusterId": "cluster-50",
+        "text": "Is attendance compulsory for the DBMS lab?",
+        "score": 0.8113467163025655
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 6,
+    "topic": "dbms",
+    "incomingQuestion": "When is Assignment 4 due?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-24",
+        "text": "When is Assignment 2 due?",
+        "score": 0.9113881883224615
+      },
+      {
+        "clusterId": "cluster-3",
+        "text": "When is Assignment 3 due?",
+        "score": 0.9104969301903626
+      },
+      {
+        "clusterId": "cluster-48",
+        "text": "Can I submit Assignment 3 late?",
+        "score": 0.8058608462690258
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 7,
+    "topic": "dbms",
+    "incomingQuestion": "When will the DBMS lab start?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-27",
+        "text": "When is the DBMS lab exam?",
+        "score": 0.9155154735691109
+      },
+      {
+        "clusterId": "cluster-0",
+        "text": "When is the DBMS exam?",
+        "score": 0.8765946823702719
+      },
+      {
+        "clusterId": "cluster-25",
+        "text": "What is the DBMS exam date?",
+        "score": 0.8556225293967995
+      },
+      {
+        "clusterId": "cluster-50",
+        "text": "Is attendance compulsory for the DBMS lab?",
+        "score": 0.851225966114959
+      },
+      {
+        "clusterId": "cluster-49",
+        "text": "What is the passing mark for the DBMS exam?",
+        "score": 0.748711515559722
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 8,
+    "topic": "dbms",
+    "incomingQuestion": "What is the DBMS exam passing mark?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-49",
+        "text": "What is the passing mark for the DBMS exam?",
+        "score": 0.9862547678161266
+      },
+      {
+        "clusterId": "cluster-25",
+        "text": "What is the DBMS exam date?",
+        "score": 0.8521010209277297
+      },
+      {
+        "clusterId": "cluster-0",
+        "text": "When is the DBMS exam?",
+        "score": 0.8361667264299334
+      },
+      {
+        "clusterId": "cluster-27",
+        "text": "When is the DBMS lab exam?",
+        "score": 0.8085816645737285
+      },
+      {
+        "clusterId": "cluster-50",
+        "text": "Is attendance compulsory for the DBMS lab?",
+        "score": 0.7809203466910689
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 9,
+    "topic": "dbms",
+    "incomingQuestion": "How do I register for the DBMS course?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-25",
+        "text": "What is the DBMS exam date?",
+        "score": 0.7953136369220807
+      },
+      {
+        "clusterId": "cluster-0",
+        "text": "When is the DBMS exam?",
+        "score": 0.7894152843900983
+      },
+      {
+        "clusterId": "cluster-50",
+        "text": "Is attendance compulsory for the DBMS lab?",
+        "score": 0.7853708202782786
+      },
+      {
+        "clusterId": "cluster-49",
+        "text": "What is the passing mark for the DBMS exam?",
+        "score": 0.7758235473541536
+      },
+      {
+        "clusterId": "cluster-27",
+        "text": "When is the DBMS lab exam?",
+        "score": 0.7633975008257051
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 10,
+    "topic": "townhall",
+    "incomingQuestion": "How does database indexing work?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 11,
+    "topic": "product_ama",
+    "incomingQuestion": "How can I submit my hackathon project?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 12,
+    "topic": "townhall",
+    "incomingQuestion": "What date is the town hall scheduled for?",
+    "expectedClusterId": "cluster-10",
+    "candidates": [
+      {
+        "clusterId": "cluster-10",
+        "text": "When is the company town hall?",
+        "score": 0.8725057818412062
+      },
+      {
+        "clusterId": "cluster-115",
+        "text": "Who is hosting the town hall?",
+        "score": 0.8540086784695571
+      },
+      {
+        "clusterId": "cluster-13",
+        "text": "Who will speak at the town hall?",
+        "score": 0.8376520728581092
+      },
+      {
+        "clusterId": "cluster-14",
+        "text": "Will the town hall be recorded?",
+        "score": 0.8082607674865893
+      },
+      {
+        "clusterId": "cluster-15",
+        "text": "How can I submit a question for the town hall?",
+        "score": 0.7958116994444505
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 13,
+    "topic": "townhall",
+    "incomingQuestion": "Which people are presenting during the town hall?",
+    "expectedClusterId": "cluster-13",
+    "candidates": [
+      {
+        "clusterId": "cluster-28",
+        "text": "Who is presenting at the company town hall?",
+        "score": 0.9137507813076714
+      },
+      {
+        "clusterId": "cluster-13",
+        "text": "Who will speak at the town hall?",
+        "score": 0.8961327379327886
+      },
+      {
+        "clusterId": "cluster-115",
+        "text": "Who is hosting the town hall?",
+        "score": 0.8604635688023131
+      },
+      {
+        "clusterId": "cluster-75",
+        "text": "Who is hosting the upcoming company town hall?",
+        "score": 0.8462134846659439
+      },
+      {
+        "clusterId": "cluster-101",
+        "text": "Who will answer employee questions at the town hall?",
+        "score": 0.835747151230594
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 14,
+    "topic": "townhall",
+    "incomingQuestion": "Can employees watch a recording of the town hall later?",
+    "expectedClusterId": "cluster-14",
+    "candidates": [
+      {
+        "clusterId": "cluster-14",
+        "text": "Will the town hall be recorded?",
+        "score": 0.8998842702103479
+      },
+      {
+        "clusterId": "cluster-109",
+        "text": "How can I access the town hall recording?",
+        "score": 0.8969658725879972
+      },
+      {
+        "clusterId": "cluster-40",
+        "text": "Where can I watch the town hall recording?",
+        "score": 0.8876383087703007
+      },
+      {
+        "clusterId": "cluster-41",
+        "text": "Can remote employees attend the town hall?",
+        "score": 0.8643775878884841
+      },
+      {
+        "clusterId": "cluster-77",
+        "text": "Where can employees find the town hall presentation slides?",
+        "score": 0.8256162346688716
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 15,
+    "topic": "townhall",
+    "incomingQuestion": "Where should I send my questions before the town hall?",
+    "expectedClusterId": "cluster-15",
+    "candidates": [
+      {
+        "clusterId": "cluster-15",
+        "text": "How can I submit a question for the town hall?",
+        "score": 0.9539535218570683
+      },
+      {
+        "clusterId": "cluster-14",
+        "text": "Will the town hall be recorded?",
+        "score": 0.8391278705879245
+      },
+      {
+        "clusterId": "cluster-40",
+        "text": "Where can I watch the town hall recording?",
+        "score": 0.8310872738745261
+      },
+      {
+        "clusterId": "cluster-101",
+        "text": "Who will answer employee questions at the town hall?",
+        "score": 0.823210935535109
+      },
+      {
+        "clusterId": "cluster-115",
+        "text": "Who is hosting the town hall?",
+        "score": 0.820151103064606
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 16,
+    "topic": "townhall",
+    "incomingQuestion": "Will employees be allowed to ask questions during the town hall?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-76",
+        "text": "Will employees be able to ask questions live?",
+        "score": 0.9102894201599142
+      },
+      {
+        "clusterId": "cluster-101",
+        "text": "Who will answer employee questions at the town hall?",
+        "score": 0.8975916554416589
+      },
+      {
+        "clusterId": "cluster-15",
+        "text": "How can I submit a question for the town hall?",
+        "score": 0.8763244595307619
+      },
+      {
+        "clusterId": "cluster-54",
+        "text": "Will the CEO answer employee questions?",
+        "score": 0.8696518505493105
+      },
+      {
+        "clusterId": "cluster-41",
+        "text": "Can remote employees attend the town hall?",
+        "score": 0.8688275982894887
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 17,
+    "topic": "townhall",
+    "incomingQuestion": "When will the town hall take place?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-10",
+        "text": "When is the company town hall?",
+        "score": 0.8939218996217294
+      },
+      {
+        "clusterId": "cluster-115",
+        "text": "Who is hosting the town hall?",
+        "score": 0.8580847175388573
+      },
+      {
+        "clusterId": "cluster-13",
+        "text": "Who will speak at the town hall?",
+        "score": 0.8434965167649611
+      },
+      {
+        "clusterId": "cluster-14",
+        "text": "Will the town hall be recorded?",
+        "score": 0.8387687899399503
+      },
+      {
+        "clusterId": "cluster-15",
+        "text": "How can I submit a question for the town hall?",
+        "score": 0.8112694675069294
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 18,
+    "topic": "product_ama",
+    "incomingQuestion": "What capabilities does the new product offer?",
+    "expectedClusterId": "cluster-18",
+    "candidates": [
+      {
+        "clusterId": "cluster-67",
+        "text": "What features does the new product offer?",
+        "score": 0.9299547166303841
+      },
+      {
+        "clusterId": "cluster-18",
+        "text": "What features are included in the new product?",
+        "score": 0.8956271271840593
+      },
+      {
+        "clusterId": "cluster-117",
+        "text": "What are the product's main features?",
+        "score": 0.7998142751124875
+      },
+      {
+        "clusterId": "cluster-43",
+        "text": "Does the new product support offline usage?",
+        "score": 0.7712114478805918
+      },
+      {
+        "clusterId": "cluster-11",
+        "text": "What is the product launch date?",
+        "score": 0.7145684779465694
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 19,
+    "topic": "product_ama",
+    "incomingQuestion": "What is the expected release date of the product?",
+    "expectedClusterId": "cluster-19",
+    "candidates": [
+      {
+        "clusterId": "cluster-11",
+        "text": "What is the product launch date?",
+        "score": 0.8983055182628804
+      },
+      {
+        "clusterId": "cluster-19",
+        "text": "When will the product launch?",
+        "score": 0.8851360082789628
+      },
+      {
+        "clusterId": "cluster-20",
+        "text": "How much will the product cost?",
+        "score": 0.7335486526796257
+      },
+      {
+        "clusterId": "cluster-18",
+        "text": "What features are included in the new product?",
+        "score": 0.7299965845650451
+      },
+      {
+        "clusterId": "cluster-67",
+        "text": "What features does the new product offer?",
+        "score": 0.7175024426603984
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 20,
+    "topic": "product_ama",
+    "incomingQuestion": "What is the expected pricing of the product?",
+    "expectedClusterId": "cluster-20",
+    "candidates": [
+      {
+        "clusterId": "cluster-20",
+        "text": "How much will the product cost?",
+        "score": 0.9055920118021465
+      },
+      {
+        "clusterId": "cluster-31",
+        "text": "How much does the product cost?",
+        "score": 0.8611299046262764
+      },
+      {
+        "clusterId": "cluster-91",
+        "text": "What is the product subscription price?",
+        "score": 0.8078795601014044
+      },
+      {
+        "clusterId": "cluster-19",
+        "text": "When will the product launch?",
+        "score": 0.7736945787040165
+      },
+      {
+        "clusterId": "cluster-56",
+        "text": "Is the product free?",
+        "score": 0.7536228306216661
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 21,
+    "topic": "product_ama",
+    "incomingQuestion": "What features does the product offer?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-117",
+        "text": "What are the product's main features?",
+        "score": 0.95126400436139
+      },
+      {
+        "clusterId": "cluster-67",
+        "text": "What features does the new product offer?",
+        "score": 0.9081134560277319
+      },
+      {
+        "clusterId": "cluster-18",
+        "text": "What features are included in the new product?",
+        "score": 0.9013784174163251
+      },
+      {
+        "clusterId": "cluster-55",
+        "text": "Does the product support offline mode?",
+        "score": 0.7463890441380722
+      },
+      {
+        "clusterId": "cluster-32",
+        "text": "Can the product be used offline?",
+        "score": 0.7384188137744644
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 22,
+    "topic": "hackathon",
+    "incomingQuestion": "Until when can teams submit their hackathon projects?",
+    "expectedClusterId": "cluster-22",
+    "candidates": [
+      {
+        "clusterId": "cluster-22",
+        "text": "What is the hackathon submission deadline?",
+        "score": 0.9226243905947994
+      },
+      {
+        "clusterId": "cluster-81",
+        "text": "What is the hackathon registration deadline?",
+        "score": 0.8684005432939862
+      },
+      {
+        "clusterId": "cluster-111",
+        "text": "When will hackathon winners be announced?",
+        "score": 0.8211874139384409
+      },
+      {
+        "clusterId": "cluster-35",
+        "text": "When will hackathon results be announced?",
+        "score": 0.8208836505549797
+      },
+      {
+        "clusterId": "cluster-107",
+        "text": "How many members can join a hackathon team?",
+        "score": 0.7884773758916515
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 23,
+    "topic": "hackathon",
+    "incomingQuestion": "What is the maximum team size for the hackathon?",
+    "expectedClusterId": "cluster-23",
+    "candidates": [
+      {
+        "clusterId": "cluster-59",
+        "text": "What is the hackathon team size limit?",
+        "score": 0.9702690388128488
+      },
+      {
+        "clusterId": "cluster-23",
+        "text": "How many members can a hackathon team have?",
+        "score": 0.9434625509414102
+      },
+      {
+        "clusterId": "cluster-107",
+        "text": "How many members can join a hackathon team?",
+        "score": 0.9399464969743477
+      },
+      {
+        "clusterId": "cluster-34",
+        "text": "How many people can join a hackathon team?",
+        "score": 0.9388772783693676
+      },
+      {
+        "clusterId": "cluster-81",
+        "text": "What is the hackathon registration deadline?",
+        "score": 0.7897413317272987
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 24,
+    "topic": "dbms",
+    "incomingQuestion": "How do I submit Assignment 2?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-24",
+        "text": "When is Assignment 2 due?",
+        "score": 0.8674385350862984
+      },
+      {
+        "clusterId": "cluster-48",
+        "text": "Can I submit Assignment 3 late?",
+        "score": 0.8128307128287147
+      },
+      {
+        "clusterId": "cluster-3",
+        "text": "When is Assignment 3 due?",
+        "score": 0.797232675886366
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 25,
+    "topic": "dbms",
+    "incomingQuestion": "What is the DBMS exam passing score?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-49",
+        "text": "What is the passing mark for the DBMS exam?",
+        "score": 0.9808972732325858
+      },
+      {
+        "clusterId": "cluster-25",
+        "text": "What is the DBMS exam date?",
+        "score": 0.8400046593685306
+      },
+      {
+        "clusterId": "cluster-0",
+        "text": "When is the DBMS exam?",
+        "score": 0.8243623750562815
+      },
+      {
+        "clusterId": "cluster-27",
+        "text": "When is the DBMS lab exam?",
+        "score": 0.7948157292048301
+      },
+      {
+        "clusterId": "cluster-50",
+        "text": "Is attendance compulsory for the DBMS lab?",
+        "score": 0.7608050203815798
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 26,
+    "topic": "dbms",
+    "incomingQuestion": "Explain denormalization in DBMS.",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-26",
+        "text": "Explain normalization in DBMS.",
+        "score": 0.8842364194596977
+      },
+      {
+        "clusterId": "cluster-1",
+        "text": "Explain database normalization.",
+        "score": 0.8392506095273028
+      },
+      {
+        "clusterId": "cluster-84",
+        "text": "What is database normalization?",
+        "score": 0.8250650750407366
+      },
+      {
+        "clusterId": "cluster-108",
+        "text": "What is the purpose of database normalization?",
+        "score": 0.7935101294259008
+      },
+      {
+        "clusterId": "cluster-36",
+        "text": "What is a primary key in DBMS?",
+        "score": 0.749060965830559
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 27,
+    "topic": "dbms",
+    "incomingQuestion": "What topics are included in the DBMS lab exam?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-27",
+        "text": "When is the DBMS lab exam?",
+        "score": 0.8928554102959686
+      },
+      {
+        "clusterId": "cluster-25",
+        "text": "What is the DBMS exam date?",
+        "score": 0.8403987304361618
+      },
+      {
+        "clusterId": "cluster-0",
+        "text": "When is the DBMS exam?",
+        "score": 0.8309850829521122
+      },
+      {
+        "clusterId": "cluster-49",
+        "text": "What is the passing mark for the DBMS exam?",
+        "score": 0.8150843981712437
+      },
+      {
+        "clusterId": "cluster-50",
+        "text": "Is attendance compulsory for the DBMS lab?",
+        "score": 0.8127296380642257
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 28,
+    "topic": "townhall",
+    "incomingQuestion": "Who is allowed to attend the company town hall?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-41",
+        "text": "Can remote employees attend the town hall?",
+        "score": 0.8723916359508167
+      },
+      {
+        "clusterId": "cluster-101",
+        "text": "Who will answer employee questions at the town hall?",
+        "score": 0.8372526999808221
+      },
+      {
+        "clusterId": "cluster-10",
+        "text": "When is the company town hall?",
+        "score": 0.8248343152200597
+      },
+      {
+        "clusterId": "cluster-28",
+        "text": "Who is presenting at the company town hall?",
+        "score": 0.821216502933431
+      },
+      {
+        "clusterId": "cluster-75",
+        "text": "Who is hosting the upcoming company town hall?",
+        "score": 0.8069831112113401
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 29,
+    "topic": "townhall",
+    "incomingQuestion": "Where will the town hall recording be uploaded?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-40",
+        "text": "Where can I watch the town hall recording?",
+        "score": 0.9514001195443047
+      },
+      {
+        "clusterId": "cluster-109",
+        "text": "How can I access the town hall recording?",
+        "score": 0.932427557575663
+      },
+      {
+        "clusterId": "cluster-14",
+        "text": "Will the town hall be recorded?",
+        "score": 0.931206962528843
+      },
+      {
+        "clusterId": "cluster-15",
+        "text": "How can I submit a question for the town hall?",
+        "score": 0.8251555488839317
+      },
+      {
+        "clusterId": "cluster-77",
+        "text": "Where can employees find the town hall presentation slides?",
+        "score": 0.8087985041753784
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 30,
+    "topic": "product_ama",
+    "incomingQuestion": "When will the product beta testing begin?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-19",
+        "text": "When will the product launch?",
+        "score": 0.8352564475122959
+      },
+      {
+        "clusterId": "cluster-11",
+        "text": "What is the product launch date?",
+        "score": 0.7940527804446863
+      },
+      {
+        "clusterId": "cluster-79",
+        "text": "Will the product have a mobile application?",
+        "score": 0.7147434866589962
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 31,
+    "topic": "product_ama",
+    "incomingQuestion": "What payment methods does the product support?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-31",
+        "text": "How much does the product cost?",
+        "score": 0.7375431288213807
+      },
+      {
+        "clusterId": "cluster-69",
+        "text": "Does the product support Android?",
+        "score": 0.7287779828053684
+      },
+      {
+        "clusterId": "cluster-117",
+        "text": "What are the product's main features?",
+        "score": 0.7241468932905037
+      },
+      {
+        "clusterId": "cluster-56",
+        "text": "Is the product free?",
+        "score": 0.7110138040583923
+      },
+      {
+        "clusterId": "cluster-91",
+        "text": "What is the product subscription price?",
+        "score": 0.7104028978121107
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 32,
+    "topic": "product_ama",
+    "incomingQuestion": "Does the product support multiple languages?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-92",
+        "text": "Will the product support multiple languages?",
+        "score": 0.9327405129579958
+      },
+      {
+        "clusterId": "cluster-69",
+        "text": "Does the product support Android?",
+        "score": 0.7662808276339176
+      },
+      {
+        "clusterId": "cluster-55",
+        "text": "Does the product support offline mode?",
+        "score": 0.7528640845837312
+      },
+      {
+        "clusterId": "cluster-110",
+        "text": "Does the product support two-factor authentication?",
+        "score": 0.7383188768303673
+      },
+      {
+        "clusterId": "cluster-118",
+        "text": "Can I use the product on Android?",
+        "score": 0.7368078571922104
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 33,
+    "topic": "hackathon",
+    "incomingQuestion": "What are the judging criteria for the hackathon?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-95",
+        "text": "What are the hackathon judging criteria?",
+        "score": 0.9866028112788343
+      },
+      {
+        "clusterId": "cluster-111",
+        "text": "When will hackathon winners be announced?",
+        "score": 0.8027689259173688
+      },
+      {
+        "clusterId": "cluster-35",
+        "text": "When will hackathon results be announced?",
+        "score": 0.7989072401144159
+      },
+      {
+        "clusterId": "cluster-80",
+        "text": "What programming languages are allowed in the hackathon?",
+        "score": 0.7774636130970983
+      },
+      {
+        "clusterId": "cluster-70",
+        "text": "What is the hackathon prize pool?",
+        "score": 0.7753003421126315
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 34,
+    "topic": "hackathon",
+    "incomingQuestion": "How many projects can one team submit?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-34",
+        "text": "How many people can join a hackathon team?",
+        "score": 0.8215629437597112
+      },
+      {
+        "clusterId": "cluster-23",
+        "text": "How many members can a hackathon team have?",
+        "score": 0.8170974414252242
+      },
+      {
+        "clusterId": "cluster-107",
+        "text": "How many members can join a hackathon team?",
+        "score": 0.8111695401708271
+      },
+      {
+        "clusterId": "cluster-59",
+        "text": "What is the hackathon team size limit?",
+        "score": 0.8063141159671576
+      },
+      {
+        "clusterId": "cluster-22",
+        "text": "What is the hackathon submission deadline?",
+        "score": 0.7280543539585062
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 35,
+    "topic": "hackathon",
+    "incomingQuestion": "When does hackathon registration close?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-81",
+        "text": "What is the hackathon registration deadline?",
+        "score": 0.9600321494860463
+      },
+      {
+        "clusterId": "cluster-22",
+        "text": "What is the hackathon submission deadline?",
+        "score": 0.8816238688575722
+      },
+      {
+        "clusterId": "cluster-71",
+        "text": "How do I register for the hackathon?",
+        "score": 0.8783655871802336
+      },
+      {
+        "clusterId": "cluster-111",
+        "text": "When will hackathon winners be announced?",
+        "score": 0.8174974137667613
+      },
+      {
+        "clusterId": "cluster-35",
+        "text": "When will hackathon results be announced?",
+        "score": 0.8114537108703755
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 36,
+    "topic": "dbms",
+    "incomingQuestion": "Explain the purpose of a primary key in a database.",
+    "expectedClusterId": "cluster-36",
+    "candidates": [
+      {
+        "clusterId": "cluster-61",
+        "text": "What is a primary key?",
+        "score": 0.9126879508079625
+      },
+      {
+        "clusterId": "cluster-36",
+        "text": "What is a primary key in DBMS?",
+        "score": 0.8711769968274107
+      },
+      {
+        "clusterId": "cluster-72",
+        "text": "What is a foreign key used for?",
+        "score": 0.8117712554649977
+      },
+      {
+        "clusterId": "cluster-37",
+        "text": "What is a foreign key?",
+        "score": 0.7969943126889807
+      },
+      {
+        "clusterId": "cluster-108",
+        "text": "What is the purpose of database normalization?",
+        "score": 0.7846025797914655
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 37,
+    "topic": "dbms",
+    "incomingQuestion": "Explain how foreign keys work in relational databases.",
+    "expectedClusterId": "cluster-37",
+    "candidates": [
+      {
+        "clusterId": "cluster-37",
+        "text": "What is a foreign key?",
+        "score": 0.9006866724892528
+      },
+      {
+        "clusterId": "cluster-72",
+        "text": "What is a foreign key used for?",
+        "score": 0.8843702228924959
+      },
+      {
+        "clusterId": "cluster-61",
+        "text": "What is a primary key?",
+        "score": 0.7635428102098111
+      },
+      {
+        "clusterId": "cluster-86",
+        "text": "What is a composite key?",
+        "score": 0.7451574250597673
+      },
+      {
+        "clusterId": "cluster-36",
+        "text": "What is a primary key in DBMS?",
+        "score": 0.7357550964640455
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 38,
+    "topic": "dbms",
+    "incomingQuestion": "How does the DELETE command differ from TRUNCATE in SQL?",
+    "expectedClusterId": "cluster-38",
+    "candidates": [
+      {
+        "clusterId": "cluster-38",
+        "text": "What is the difference between DELETE and TRUNCATE?",
+        "score": 0.9584770871378341
+      },
+      {
+        "clusterId": "cluster-2",
+        "text": "What is the difference between SQL and NoSQL?",
+        "score": 0.7388988479571462
+      },
+      {
+        "clusterId": "cluster-85",
+        "text": "Explain the difference between SQL and NoSQL.",
+        "score": 0.7270792232408323
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 39,
+    "topic": "dbms",
+    "incomingQuestion": "Explain the meaning of candidate keys in DBMS.",
+    "expectedClusterId": "cluster-39",
+    "candidates": [
+      {
+        "clusterId": "cluster-39",
+        "text": "What is a candidate key?",
+        "score": 0.8947803857096119
+      },
+      {
+        "clusterId": "cluster-36",
+        "text": "What is a primary key in DBMS?",
+        "score": 0.8365728030177025
+      },
+      {
+        "clusterId": "cluster-26",
+        "text": "Explain normalization in DBMS.",
+        "score": 0.7736515222331225
+      },
+      {
+        "clusterId": "cluster-86",
+        "text": "What is a composite key?",
+        "score": 0.7679865780133536
+      },
+      {
+        "clusterId": "cluster-61",
+        "text": "What is a primary key?",
+        "score": 0.7637745101916404
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 40,
+    "topic": "townhall",
+    "incomingQuestion": "Where will the recording of the town hall be available?",
+    "expectedClusterId": "cluster-40",
+    "candidates": [
+      {
+        "clusterId": "cluster-40",
+        "text": "Where can I watch the town hall recording?",
+        "score": 0.9649631132404702
+      },
+      {
+        "clusterId": "cluster-109",
+        "text": "How can I access the town hall recording?",
+        "score": 0.9486843254005785
+      },
+      {
+        "clusterId": "cluster-14",
+        "text": "Will the town hall be recorded?",
+        "score": 0.9390539963221175
+      },
+      {
+        "clusterId": "cluster-15",
+        "text": "How can I submit a question for the town hall?",
+        "score": 0.8272382230558473
+      },
+      {
+        "clusterId": "cluster-77",
+        "text": "Where can employees find the town hall presentation slides?",
+        "score": 0.8146588674835717
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 41,
+    "topic": "townhall",
+    "incomingQuestion": "Are employees working remotely allowed to join the town hall?",
+    "expectedClusterId": "cluster-41",
+    "candidates": [
+      {
+        "clusterId": "cluster-41",
+        "text": "Can remote employees attend the town hall?",
+        "score": 0.9658451262116661
+      },
+      {
+        "clusterId": "cluster-76",
+        "text": "Will employees be able to ask questions live?",
+        "score": 0.8150368256385729
+      },
+      {
+        "clusterId": "cluster-14",
+        "text": "Will the town hall be recorded?",
+        "score": 0.8144774894859114
+      },
+      {
+        "clusterId": "cluster-101",
+        "text": "Who will answer employee questions at the town hall?",
+        "score": 0.8040890773284017
+      },
+      {
+        "clusterId": "cluster-10",
+        "text": "When is the company town hall?",
+        "score": 0.7797445394052023
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 42,
+    "topic": "townhall",
+    "incomingQuestion": "Whom can I reach out to if I cannot access the town hall?",
+    "expectedClusterId": "cluster-42",
+    "candidates": [
+      {
+        "clusterId": "cluster-42",
+        "text": "Who should I contact about town hall access problems?",
+        "score": 0.9241180283315785
+      },
+      {
+        "clusterId": "cluster-53",
+        "text": "Is the town hall mandatory?",
+        "score": 0.804371245552815
+      },
+      {
+        "clusterId": "cluster-15",
+        "text": "How can I submit a question for the town hall?",
+        "score": 0.7558962843673975
+      },
+      {
+        "clusterId": "cluster-109",
+        "text": "How can I access the town hall recording?",
+        "score": 0.7531405810742012
+      },
+      {
+        "clusterId": "cluster-14",
+        "text": "Will the town hall be recorded?",
+        "score": 0.7401438484737896
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 43,
+    "topic": "product_ama",
+    "incomingQuestion": "Can I use the product without an internet connection?",
+    "expectedClusterId": "cluster-43",
+    "candidates": [
+      {
+        "clusterId": "cluster-32",
+        "text": "Can the product be used offline?",
+        "score": 0.9481175501131831
+      },
+      {
+        "clusterId": "cluster-55",
+        "text": "Does the product support offline mode?",
+        "score": 0.9113349400821181
+      },
+      {
+        "clusterId": "cluster-103",
+        "text": "Does the product support offline access?",
+        "score": 0.8877935063044422
+      },
+      {
+        "clusterId": "cluster-43",
+        "text": "Does the new product support offline usage?",
+        "score": 0.8797309564315683
+      },
+      {
+        "clusterId": "cluster-118",
+        "text": "Can I use the product on Android?",
+        "score": 0.7542382686783276
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 44,
+    "topic": "product_ama",
+    "incomingQuestion": "Can Android users install and use the product?",
+    "expectedClusterId": "cluster-44",
+    "candidates": [
+      {
+        "clusterId": "cluster-118",
+        "text": "Can I use the product on Android?",
+        "score": 0.9491900135186758
+      },
+      {
+        "clusterId": "cluster-44",
+        "text": "Is the product available on Android?",
+        "score": 0.9387674011268404
+      },
+      {
+        "clusterId": "cluster-69",
+        "text": "Does the product support Android?",
+        "score": 0.9204144102948371
+      },
+      {
+        "clusterId": "cluster-79",
+        "text": "Will the product have a mobile application?",
+        "score": 0.7885553341805355
+      },
+      {
+        "clusterId": "cluster-32",
+        "text": "Can the product be used offline?",
+        "score": 0.7491129357742314
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 45,
+    "topic": "product_ama",
+    "incomingQuestion": "Where should I submit product bug reports?",
+    "expectedClusterId": "cluster-45",
+    "candidates": [
+      {
+        "clusterId": "cluster-45",
+        "text": "How can I report a bug in the product?",
+        "score": 0.9289422447196106
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 46,
+    "topic": "hackathon",
+    "incomingQuestion": "Can people with no previous hackathon experience join?",
+    "expectedClusterId": "cluster-46",
+    "candidates": [
+      {
+        "clusterId": "cluster-46",
+        "text": "Are beginners allowed to participate in the hackathon?",
+        "score": 0.9276379345423321
+      },
+      {
+        "clusterId": "cluster-58",
+        "text": "Can beginners participate in the hackathon?",
+        "score": 0.9271052178404624
+      },
+      {
+        "clusterId": "cluster-34",
+        "text": "How many people can join a hackathon team?",
+        "score": 0.8176511849510312
+      },
+      {
+        "clusterId": "cluster-107",
+        "text": "How many members can join a hackathon team?",
+        "score": 0.8134244441715698
+      },
+      {
+        "clusterId": "cluster-23",
+        "text": "How many members can a hackathon team have?",
+        "score": 0.804618261431815
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 47,
+    "topic": "hackathon",
+    "incomingQuestion": "Do hackathon participants get participation certificates?",
+    "expectedClusterId": "cluster-47",
+    "candidates": [
+      {
+        "clusterId": "cluster-47",
+        "text": "Will participants receive certificates?",
+        "score": 0.8716050663165767
+      },
+      {
+        "clusterId": "cluster-58",
+        "text": "Can beginners participate in the hackathon?",
+        "score": 0.8134079787872083
+      },
+      {
+        "clusterId": "cluster-46",
+        "text": "Are beginners allowed to participate in the hackathon?",
+        "score": 0.7943420036423925
+      },
+      {
+        "clusterId": "cluster-111",
+        "text": "When will hackathon winners be announced?",
+        "score": 0.7912694728526151
+      },
+      {
+        "clusterId": "cluster-35",
+        "text": "When will hackathon results be announced?",
+        "score": 0.7865425086430352
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 48,
+    "topic": "dbms",
+    "incomingQuestion": "What is the deadline for Assignment 3?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-3",
+        "text": "When is Assignment 3 due?",
+        "score": 0.9724337641935359
+      },
+      {
+        "clusterId": "cluster-24",
+        "text": "When is Assignment 2 due?",
+        "score": 0.8814746850880874
+      },
+      {
+        "clusterId": "cluster-48",
+        "text": "Can I submit Assignment 3 late?",
+        "score": 0.863342353416957
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 49,
+    "topic": "dbms",
+    "incomingQuestion": "How many marks is the DBMS exam worth?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-49",
+        "text": "What is the passing mark for the DBMS exam?",
+        "score": 0.9198684484162881
+      },
+      {
+        "clusterId": "cluster-0",
+        "text": "When is the DBMS exam?",
+        "score": 0.8709858005902917
+      },
+      {
+        "clusterId": "cluster-25",
+        "text": "What is the DBMS exam date?",
+        "score": 0.87041359912759
+      },
+      {
+        "clusterId": "cluster-27",
+        "text": "When is the DBMS lab exam?",
+        "score": 0.8362909055945242
+      },
+      {
+        "clusterId": "cluster-50",
+        "text": "Is attendance compulsory for the DBMS lab?",
+        "score": 0.788328364601739
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 50,
+    "topic": "dbms",
+    "incomingQuestion": "What is the minimum attendance percentage for the DBMS course?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-50",
+        "text": "Is attendance compulsory for the DBMS lab?",
+        "score": 0.8898003047092994
+      },
+      {
+        "clusterId": "cluster-49",
+        "text": "What is the passing mark for the DBMS exam?",
+        "score": 0.8690753007290117
+      },
+      {
+        "clusterId": "cluster-0",
+        "text": "When is the DBMS exam?",
+        "score": 0.8055812175876039
+      },
+      {
+        "clusterId": "cluster-25",
+        "text": "What is the DBMS exam date?",
+        "score": 0.8044053541366544
+      },
+      {
+        "clusterId": "cluster-27",
+        "text": "When is the DBMS lab exam?",
+        "score": 0.7889515191866023
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 51,
+    "topic": "dbms",
+    "incomingQuestion": "How do I install PostgreSQL for the DBMS project?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-51",
+        "text": "Can I use PostgreSQL for the DBMS project?",
+        "score": 0.8620792266932544
+      },
+      {
+        "clusterId": "cluster-50",
+        "text": "Is attendance compulsory for the DBMS lab?",
+        "score": 0.7237994999818429
+      },
+      {
+        "clusterId": "cluster-27",
+        "text": "When is the DBMS lab exam?",
+        "score": 0.7097076520200772
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 52,
+    "topic": "townhall",
+    "incomingQuestion": "Can employees attend the town hall remotely?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-41",
+        "text": "Can remote employees attend the town hall?",
+        "score": 0.9756301657399366
+      },
+      {
+        "clusterId": "cluster-14",
+        "text": "Will the town hall be recorded?",
+        "score": 0.8538892836638615
+      },
+      {
+        "clusterId": "cluster-76",
+        "text": "Will employees be able to ask questions live?",
+        "score": 0.8419169909899566
+      },
+      {
+        "clusterId": "cluster-101",
+        "text": "Who will answer employee questions at the town hall?",
+        "score": 0.8284422118906496
+      },
+      {
+        "clusterId": "cluster-109",
+        "text": "How can I access the town hall recording?",
+        "score": 0.8212304064909784
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 53,
+    "topic": "townhall",
+    "incomingQuestion": "Who is invited to the town hall?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-13",
+        "text": "Who will speak at the town hall?",
+        "score": 0.8511591942544576
+      },
+      {
+        "clusterId": "cluster-115",
+        "text": "Who is hosting the town hall?",
+        "score": 0.8424502434226826
+      },
+      {
+        "clusterId": "cluster-101",
+        "text": "Who will answer employee questions at the town hall?",
+        "score": 0.8032791764837002
+      },
+      {
+        "clusterId": "cluster-14",
+        "text": "Will the town hall be recorded?",
+        "score": 0.7986487746766728
+      },
+      {
+        "clusterId": "cluster-41",
+        "text": "Can remote employees attend the town hall?",
+        "score": 0.7977464403705711
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 54,
+    "topic": "townhall",
+    "incomingQuestion": "How can employees submit questions to the CEO?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-54",
+        "text": "Will the CEO answer employee questions?",
+        "score": 0.8962360807013438
+      },
+      {
+        "clusterId": "cluster-15",
+        "text": "How can I submit a question for the town hall?",
+        "score": 0.8134914874724173
+      },
+      {
+        "clusterId": "cluster-76",
+        "text": "Will employees be able to ask questions live?",
+        "score": 0.8023841132685469
+      },
+      {
+        "clusterId": "cluster-101",
+        "text": "Who will answer employee questions at the town hall?",
+        "score": 0.7853508749230502
+      },
+      {
+        "clusterId": "cluster-65",
+        "text": "Who is the CEO?",
+        "score": 0.7398341246201382
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 55,
+    "topic": "product_ama",
+    "incomingQuestion": "How do I enable offline mode in the product?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-55",
+        "text": "Does the product support offline mode?",
+        "score": 0.915333718994043
+      },
+      {
+        "clusterId": "cluster-103",
+        "text": "Does the product support offline access?",
+        "score": 0.9065451298296242
+      },
+      {
+        "clusterId": "cluster-32",
+        "text": "Can the product be used offline?",
+        "score": 0.88627724528431
+      },
+      {
+        "clusterId": "cluster-43",
+        "text": "Does the new product support offline usage?",
+        "score": 0.8778808589424468
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 56,
+    "topic": "product_ama",
+    "incomingQuestion": "Does the product offer a free trial?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-56",
+        "text": "Is the product free?",
+        "score": 0.849193433669811
+      },
+      {
+        "clusterId": "cluster-55",
+        "text": "Does the product support offline mode?",
+        "score": 0.7306179098227638
+      },
+      {
+        "clusterId": "cluster-31",
+        "text": "How much does the product cost?",
+        "score": 0.7274351782301697
+      },
+      {
+        "clusterId": "cluster-103",
+        "text": "Does the product support offline access?",
+        "score": 0.7268690423005933
+      },
+      {
+        "clusterId": "cluster-32",
+        "text": "Can the product be used offline?",
+        "score": 0.7235513948998564
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 57,
+    "topic": "product_ama",
+    "incomingQuestion": "When will the product become available for download?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-19",
+        "text": "When will the product launch?",
+        "score": 0.8045517680208729
+      },
+      {
+        "clusterId": "cluster-11",
+        "text": "What is the product launch date?",
+        "score": 0.764734819436722
+      },
+      {
+        "clusterId": "cluster-103",
+        "text": "Does the product support offline access?",
+        "score": 0.7199419255238357
+      },
+      {
+        "clusterId": "cluster-56",
+        "text": "Is the product free?",
+        "score": 0.7067534653186344
+      },
+      {
+        "clusterId": "cluster-20",
+        "text": "How much will the product cost?",
+        "score": 0.7041174599979966
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 58,
+    "topic": "hackathon",
+    "incomingQuestion": "Are beginners eligible to win hackathon prizes?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-58",
+        "text": "Can beginners participate in the hackathon?",
+        "score": 0.9341184245462595
+      },
+      {
+        "clusterId": "cluster-46",
+        "text": "Are beginners allowed to participate in the hackathon?",
+        "score": 0.9275680510825409
+      },
+      {
+        "clusterId": "cluster-70",
+        "text": "What is the hackathon prize pool?",
+        "score": 0.7847807432188905
+      },
+      {
+        "clusterId": "cluster-95",
+        "text": "What are the hackathon judging criteria?",
+        "score": 0.7776261648793772
+      },
+      {
+        "clusterId": "cluster-23",
+        "text": "How many members can a hackathon team have?",
+        "score": 0.7657101332171792
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 59,
+    "topic": "hackathon",
+    "incomingQuestion": "Can participants change their teams after registration?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-34",
+        "text": "How many people can join a hackathon team?",
+        "score": 0.7614169382356073
+      },
+      {
+        "clusterId": "cluster-23",
+        "text": "How many members can a hackathon team have?",
+        "score": 0.7592301851903767
+      },
+      {
+        "clusterId": "cluster-107",
+        "text": "How many members can join a hackathon team?",
+        "score": 0.7565359923547239
+      },
+      {
+        "clusterId": "cluster-59",
+        "text": "What is the hackathon team size limit?",
+        "score": 0.7200010596300623
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 60,
+    "topic": "dbms",
+    "incomingQuestion": "What is the company's annual revenue?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 61,
+    "topic": "dbms",
+    "incomingQuestion": "When will the company town hall begin?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 62,
+    "topic": "dbms",
+    "incomingQuestion": "What are the new product subscription plans?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 63,
+    "topic": "dbms",
+    "incomingQuestion": "Where is the hackathon venue?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 64,
+    "topic": "townhall",
+    "incomingQuestion": "How do I write a SQL JOIN query?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 65,
+    "topic": "townhall",
+    "incomingQuestion": "What is database normalization?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 66,
+    "topic": "townhall",
+    "incomingQuestion": "How do I create a database backup?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 67,
+    "topic": "product_ama",
+    "incomingQuestion": "How many normal forms are there in DBMS?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 68,
+    "topic": "product_ama",
+    "incomingQuestion": "Who will judge the hackathon?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 69,
+    "topic": "product_ama",
+    "incomingQuestion": "When is the DBMS examination?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 70,
+    "topic": "hackathon",
+    "incomingQuestion": "Explain the ACID properties of database transactions.",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 71,
+    "topic": "hackathon",
+    "incomingQuestion": "What is the company's product roadmap?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 72,
+    "topic": "dbms",
+    "incomingQuestion": "Why do relational databases use foreign keys?",
+    "expectedClusterId": "cluster-72",
+    "candidates": [
+      {
+        "clusterId": "cluster-72",
+        "text": "What is a foreign key used for?",
+        "score": 0.8970557013558637
+      },
+      {
+        "clusterId": "cluster-37",
+        "text": "What is a foreign key?",
+        "score": 0.8921180381829341
+      },
+      {
+        "clusterId": "cluster-61",
+        "text": "What is a primary key?",
+        "score": 0.7804660317659746
+      },
+      {
+        "clusterId": "cluster-86",
+        "text": "What is a composite key?",
+        "score": 0.7648368456220351
+      },
+      {
+        "clusterId": "cluster-39",
+        "text": "What is a candidate key?",
+        "score": 0.7574409904547573
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 73,
+    "topic": "dbms",
+    "incomingQuestion": "Why do indexes make database queries faster?",
+    "expectedClusterId": "cluster-73",
+    "candidates": [
+      {
+        "clusterId": "cluster-87",
+        "text": "How does database indexing work?",
+        "score": 0.910680224686468
+      },
+      {
+        "clusterId": "cluster-73",
+        "text": "How does a database index improve query performance?",
+        "score": 0.9059646794709224
+      },
+      {
+        "clusterId": "cluster-62",
+        "text": "How does SQL indexing work?",
+        "score": 0.8803867520407653
+      },
+      {
+        "clusterId": "cluster-114",
+        "text": "What is a database index?",
+        "score": 0.8759680167984262
+      },
+      {
+        "clusterId": "cluster-96",
+        "text": "What is a database view?",
+        "score": 0.7312067521126433
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 74,
+    "topic": "dbms",
+    "incomingQuestion": "What does rolling back a database transaction do?",
+    "expectedClusterId": "cluster-74",
+    "candidates": [
+      {
+        "clusterId": "cluster-74",
+        "text": "What happens when a transaction is rolled back?",
+        "score": 0.945099842887524
+      },
+      {
+        "clusterId": "cluster-99",
+        "text": "What is a database transaction?",
+        "score": 0.8625757520935788
+      },
+      {
+        "clusterId": "cluster-63",
+        "text": "Explain database transactions.",
+        "score": 0.8279553752527627
+      },
+      {
+        "clusterId": "cluster-38",
+        "text": "What is the difference between DELETE and TRUNCATE?",
+        "score": 0.7201020973319673
+      },
+      {
+        "clusterId": "cluster-96",
+        "text": "What is a database view?",
+        "score": 0.7180276642429364
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 75,
+    "topic": "townhall",
+    "incomingQuestion": "Which person will host the upcoming town hall meeting?",
+    "expectedClusterId": "cluster-75",
+    "candidates": [
+      {
+        "clusterId": "cluster-115",
+        "text": "Who is hosting the town hall?",
+        "score": 0.9372301837270585
+      },
+      {
+        "clusterId": "cluster-75",
+        "text": "Who is hosting the upcoming company town hall?",
+        "score": 0.9082401949841649
+      },
+      {
+        "clusterId": "cluster-13",
+        "text": "Who will speak at the town hall?",
+        "score": 0.8771808454919469
+      },
+      {
+        "clusterId": "cluster-28",
+        "text": "Who is presenting at the company town hall?",
+        "score": 0.847519511952988
+      },
+      {
+        "clusterId": "cluster-101",
+        "text": "Who will answer employee questions at the town hall?",
+        "score": 0.8399439253132214
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 76,
+    "topic": "townhall",
+    "incomingQuestion": "Can staff members raise questions during the live town hall?",
+    "expectedClusterId": "cluster-76",
+    "candidates": [
+      {
+        "clusterId": "cluster-15",
+        "text": "How can I submit a question for the town hall?",
+        "score": 0.8862019553964925
+      },
+      {
+        "clusterId": "cluster-76",
+        "text": "Will employees be able to ask questions live?",
+        "score": 0.8652624965235084
+      },
+      {
+        "clusterId": "cluster-101",
+        "text": "Who will answer employee questions at the town hall?",
+        "score": 0.8396920595279139
+      },
+      {
+        "clusterId": "cluster-41",
+        "text": "Can remote employees attend the town hall?",
+        "score": 0.8267003002473442
+      },
+      {
+        "clusterId": "cluster-14",
+        "text": "Will the town hall be recorded?",
+        "score": 0.823461961262493
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 77,
+    "topic": "townhall",
+    "incomingQuestion": "Where will the slides from the town hall be shared?",
+    "expectedClusterId": "cluster-77",
+    "candidates": [
+      {
+        "clusterId": "cluster-77",
+        "text": "Where can employees find the town hall presentation slides?",
+        "score": 0.9296397472950818
+      },
+      {
+        "clusterId": "cluster-40",
+        "text": "Where can I watch the town hall recording?",
+        "score": 0.8467467391708438
+      },
+      {
+        "clusterId": "cluster-109",
+        "text": "How can I access the town hall recording?",
+        "score": 0.8422243613471652
+      },
+      {
+        "clusterId": "cluster-14",
+        "text": "Will the town hall be recorded?",
+        "score": 0.8352158127647885
+      },
+      {
+        "clusterId": "cluster-15",
+        "text": "How can I submit a question for the town hall?",
+        "score": 0.7938581496240095
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 78,
+    "topic": "product_ama",
+    "incomingQuestion": "Does the product allow data export?",
+    "expectedClusterId": "cluster-78",
+    "candidates": [
+      {
+        "clusterId": "cluster-78",
+        "text": "Can users export their data from the product?",
+        "score": 0.9249378043459682
+      },
+      {
+        "clusterId": "cluster-105",
+        "text": "Can users export product data?",
+        "score": 0.9022018275337195
+      },
+      {
+        "clusterId": "cluster-55",
+        "text": "Does the product support offline mode?",
+        "score": 0.7666553568003204
+      },
+      {
+        "clusterId": "cluster-103",
+        "text": "Does the product support offline access?",
+        "score": 0.7641442570970706
+      },
+      {
+        "clusterId": "cluster-43",
+        "text": "Does the new product support offline usage?",
+        "score": 0.7449935163538169
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 79,
+    "topic": "product_ama",
+    "incomingQuestion": "Is a mobile app planned for the product?",
+    "expectedClusterId": "cluster-79",
+    "candidates": [
+      {
+        "clusterId": "cluster-79",
+        "text": "Will the product have a mobile application?",
+        "score": 0.9490255678724279
+      },
+      {
+        "clusterId": "cluster-44",
+        "text": "Is the product available on Android?",
+        "score": 0.8260199983475836
+      },
+      {
+        "clusterId": "cluster-118",
+        "text": "Can I use the product on Android?",
+        "score": 0.7974529959381186
+      },
+      {
+        "clusterId": "cluster-69",
+        "text": "Does the product support Android?",
+        "score": 0.7688575668208846
+      },
+      {
+        "clusterId": "cluster-43",
+        "text": "Does the new product support offline usage?",
+        "score": 0.745878507617489
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 80,
+    "topic": "hackathon",
+    "incomingQuestion": "Which programming languages can participants use during the hackathon?",
+    "expectedClusterId": "cluster-80",
+    "candidates": [
+      {
+        "clusterId": "cluster-80",
+        "text": "What programming languages are allowed in the hackathon?",
+        "score": 0.9784084578984747
+      },
+      {
+        "clusterId": "cluster-83",
+        "text": "Can I use Python in the hackathon?",
+        "score": 0.9057143984042161
+      },
+      {
+        "clusterId": "cluster-58",
+        "text": "Can beginners participate in the hackathon?",
+        "score": 0.7875517909364416
+      },
+      {
+        "clusterId": "cluster-46",
+        "text": "Are beginners allowed to participate in the hackathon?",
+        "score": 0.7858507961082706
+      },
+      {
+        "clusterId": "cluster-71",
+        "text": "How do I register for the hackathon?",
+        "score": 0.7752420184859345
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 81,
+    "topic": "hackathon",
+    "incomingQuestion": "When will hackathon registrations close?",
+    "expectedClusterId": "cluster-81",
+    "candidates": [
+      {
+        "clusterId": "cluster-81",
+        "text": "What is the hackathon registration deadline?",
+        "score": 0.950651912384399
+      },
+      {
+        "clusterId": "cluster-22",
+        "text": "What is the hackathon submission deadline?",
+        "score": 0.8766731938772554
+      },
+      {
+        "clusterId": "cluster-71",
+        "text": "How do I register for the hackathon?",
+        "score": 0.8708975928421056
+      },
+      {
+        "clusterId": "cluster-111",
+        "text": "When will hackathon winners be announced?",
+        "score": 0.8315341735064631
+      },
+      {
+        "clusterId": "cluster-35",
+        "text": "When will hackathon results be announced?",
+        "score": 0.8277409651149961
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 82,
+    "topic": "hackathon",
+    "incomingQuestion": "When will the hackathon prize distribution take place?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-111",
+        "text": "When will hackathon winners be announced?",
+        "score": 0.8890152675355987
+      },
+      {
+        "clusterId": "cluster-35",
+        "text": "When will hackathon results be announced?",
+        "score": 0.8754593115441478
+      },
+      {
+        "clusterId": "cluster-70",
+        "text": "What is the hackathon prize pool?",
+        "score": 0.8274396435994
+      },
+      {
+        "clusterId": "cluster-94",
+        "text": "Where will the hackathon take place?",
+        "score": 0.7981408064167796
+      },
+      {
+        "clusterId": "cluster-22",
+        "text": "What is the hackathon submission deadline?",
+        "score": 0.7920310371207889
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 83,
+    "topic": "hackathon",
+    "incomingQuestion": "Can I use Java in the hackathon?",
+    "expectedClusterId": null,
+    "candidates": [
+      {
+        "clusterId": "cluster-83",
+        "text": "Can I use Python in the hackathon?",
+        "score": 0.9186846028995893
+      },
+      {
+        "clusterId": "cluster-80",
+        "text": "What programming languages are allowed in the hackathon?",
+        "score": 0.9076578911196997
+      },
+      {
+        "clusterId": "cluster-58",
+        "text": "Can beginners participate in the hackathon?",
+        "score": 0.7785252104914681
+      },
+      {
+        "clusterId": "cluster-46",
+        "text": "Are beginners allowed to participate in the hackathon?",
+        "score": 0.7737962177937531
+      },
+      {
+        "clusterId": "cluster-23",
+        "text": "How many members can a hackathon team have?",
+        "score": 0.7503617153300473
+      }
+    ],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 84,
+    "topic": "dbms",
+    "incomingQuestion": "Who will announce the winners of the hackathon?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 85,
+    "topic": "dbms",
+    "incomingQuestion": "When is the company town hall scheduled?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 86,
+    "topic": "dbms",
+    "incomingQuestion": "Does the new product support dark mode?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 87,
+    "topic": "dbms",
+    "incomingQuestion": "What is the hackathon prize money?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 88,
+    "topic": "townhall",
+    "incomingQuestion": "How do I write a SQL query to join two tables?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 89,
+    "topic": "townhall",
+    "incomingQuestion": "What is the difference between DELETE and TRUNCATE?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 90,
+    "topic": "townhall",
+    "incomingQuestion": "How do I register a team for the hackathon?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 91,
+    "topic": "product_ama",
+    "incomingQuestion": "Explain the ACID properties in DBMS.",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 92,
+    "topic": "product_ama",
+    "incomingQuestion": "Who is eligible to participate in the hackathon?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 93,
+    "topic": "product_ama",
+    "incomingQuestion": "What topics are included in the DBMS syllabus?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 94,
+    "topic": "hackathon",
+    "incomingQuestion": "Does the product have an offline mode?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 95,
+    "topic": "hackathon",
+    "incomingQuestion": "Will the company town hall be recorded?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 96,
+    "topic": "dbms",
+    "incomingQuestion": "When will the company announce its annual strategy?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 97,
+    "topic": "dbms",
+    "incomingQuestion": "Who will host the company town hall?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 98,
+    "topic": "dbms",
+    "incomingQuestion": "How much prize money will hackathon winners receive?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 99,
+    "topic": "dbms",
+    "incomingQuestion": "Does the new product support biometric login?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 100,
+    "topic": "townhall",
+    "incomingQuestion": "How do I create a foreign key in SQL?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 101,
+    "topic": "townhall",
+    "incomingQuestion": "What programming languages are allowed in the hackathon?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 102,
+    "topic": "townhall",
+    "incomingQuestion": "What is the product's monthly subscription fee?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 103,
+    "topic": "product_ama",
+    "incomingQuestion": "Explain the difference between a primary key and a candidate key.",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 104,
+    "topic": "product_ama",
+    "incomingQuestion": "Where will the hackathon take place?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 105,
+    "topic": "product_ama",
+    "incomingQuestion": "What is the DBMS examination syllabus?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 106,
+    "topic": "hackathon",
+    "incomingQuestion": "Does the product support multiple languages?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 107,
+    "topic": "hackathon",
+    "incomingQuestion": "When is the next company town hall?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 108,
+    "topic": "dbms",
+    "incomingQuestion": "Why do we normalize relational databases?",
+    "expectedClusterId": "cluster-108",
+    "candidates": [
+      {
+        "clusterId": "cluster-108",
+        "text": "What is the purpose of database normalization?",
+        "score": 0.899251754296378
+      },
+      {
+        "clusterId": "cluster-84",
+        "text": "What is database normalization?",
+        "score": 0.8894024988594957
+      },
+      {
+        "clusterId": "cluster-1",
+        "text": "Explain database normalization.",
+        "score": 0.864032261144225
+      },
+      {
+        "clusterId": "cluster-26",
+        "text": "Explain normalization in DBMS.",
+        "score": 0.8303068911811039
+      },
+      {
+        "clusterId": "cluster-87",
+        "text": "How does database indexing work?",
+        "score": 0.7357523254947278
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 109,
+    "topic": "townhall",
+    "incomingQuestion": "Where can I view the recorded town hall session?",
+    "expectedClusterId": "cluster-109",
+    "candidates": [
+      {
+        "clusterId": "cluster-40",
+        "text": "Where can I watch the town hall recording?",
+        "score": 0.9620328556682077
+      },
+      {
+        "clusterId": "cluster-109",
+        "text": "How can I access the town hall recording?",
+        "score": 0.9495851916837448
+      },
+      {
+        "clusterId": "cluster-14",
+        "text": "Will the town hall be recorded?",
+        "score": 0.8985265642133774
+      },
+      {
+        "clusterId": "cluster-77",
+        "text": "Where can employees find the town hall presentation slides?",
+        "score": 0.8378649586314229
+      },
+      {
+        "clusterId": "cluster-15",
+        "text": "How can I submit a question for the town hall?",
+        "score": 0.8184916678357705
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 110,
+    "topic": "product_ama",
+    "incomingQuestion": "Can users enable 2FA for their accounts?",
+    "expectedClusterId": "cluster-110",
+    "candidates": [
+      {
+        "clusterId": "cluster-110",
+        "text": "Does the product support two-factor authentication?",
+        "score": 0.8745113314248547
+      },
+      {
+        "clusterId": "cluster-78",
+        "text": "Can users export their data from the product?",
+        "score": 0.7384831436977619
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 111,
+    "topic": "hackathon",
+    "incomingQuestion": "On what date will the hackathon results be declared?",
+    "expectedClusterId": "cluster-111",
+    "candidates": [
+      {
+        "clusterId": "cluster-35",
+        "text": "When will hackathon results be announced?",
+        "score": 0.9396148658055321
+      },
+      {
+        "clusterId": "cluster-111",
+        "text": "When will hackathon winners be announced?",
+        "score": 0.9155485168614725
+      },
+      {
+        "clusterId": "cluster-22",
+        "text": "What is the hackathon submission deadline?",
+        "score": 0.836699347858497
+      },
+      {
+        "clusterId": "cluster-81",
+        "text": "What is the hackathon registration deadline?",
+        "score": 0.8267287008563525
+      },
+      {
+        "clusterId": "cluster-95",
+        "text": "What are the hackathon judging criteria?",
+        "score": 0.7904630191549439
+      }
+    ],
+    "targetRetrieved": true
+  },
+  {
+    "pairIndex": 112,
+    "topic": "dbms",
+    "incomingQuestion": "Who will present at the company town hall?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 113,
+    "topic": "dbms",
+    "incomingQuestion": "How much does the new product cost?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 114,
+    "topic": "dbms",
+    "incomingQuestion": "Where can I register for the hackathon?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 115,
+    "topic": "townhall",
+    "incomingQuestion": "What is the difference between SQL and NoSQL?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 116,
+    "topic": "townhall",
+    "incomingQuestion": "Does the product support dark mode?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 117,
+    "topic": "product_ama",
+    "incomingQuestion": "How many normal forms are covered in DBMS?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 118,
+    "topic": "product_ama",
+    "incomingQuestion": "Who is eligible to participate in the hackathon?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  },
+  {
+    "pairIndex": 119,
+    "topic": "hackathon",
+    "incomingQuestion": "How do database transactions work?",
+    "expectedClusterId": null,
+    "candidates": [],
+    "targetRetrieved": false
+  }
+]

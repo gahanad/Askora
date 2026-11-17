@@ -1,0 +1,482 @@
+{
+  "0": {
+    "predicted": true,
+    "reason": "Both questions ask for the exact date of the DBMS exam."
+  },
+  "1": {
+    "predicted": true,
+    "reason": "Both questions ask for an explanation of database normalization."
+  },
+  "2": {
+    "predicted": true,
+    "reason": "Both questions ask for the comparison and differences between SQL and NoSQL databases."
+  },
+  "3": {
+    "predicted": true,
+    "reason": "Both questions ask for the due date of Assignment 3."
+  },
+  "4": {
+    "predicted": true,
+    "reason": "Both questions ask for the quantity of normal forms included in the study material or syllabus."
+  },
+  "5": {
+    "predicted": false,
+    "reason": "The incoming question asks for the exam date, while Candidate 0 asks if the exam is open-book."
+  },
+  "6": {
+    "predicted": false,
+    "reason": "blocked_by_guard"
+  },
+  "7": {
+    "predicted": false,
+    "reason": "The incoming question asks for an explanation of database normalization, while the candidate asks for the start time of the DBMS lab."
+  },
+  "8": {
+    "predicted": false,
+    "reason": "The incoming question asks about the number of normal forms in the syllabus, whereas Candidate 0 asks about the DBMS exam passing mark."
+  },
+  "9": {
+    "predicted": false,
+    "reason": "The incoming question asks about the difference between SQL and NoSQL, while Candidate 0 asks how to register for a course."
+  },
+  "10": {
+    "predicted": false,
+    "reason": "The incoming question asks about the date of the company town hall, whereas Candidate 0 asks about database indexing, which is an entirely different t"
+  },
+  "11": {
+    "predicted": false,
+    "reason": "The incoming question asks for the product launch date, whereas the candidate question asks how to submit a hackathon project."
+  },
+  "12": {
+    "predicted": true,
+    "reason": "Both questions ask for the date and time of the company town hall."
+  },
+  "13": {
+    "predicted": true,
+    "reason": "Both questions ask for the identity of the speakers or presenters at the town hall."
+  },
+  "14": {
+    "predicted": true,
+    "reason": "Both questions ask whether a recording of the town hall will be available for viewing."
+  },
+  "15": {
+    "predicted": true,
+    "reason": "Both questions ask for the method or location to submit questions for the town hall."
+  },
+  "16": {
+    "predicted": false,
+    "reason": "The incoming question asks for the schedule, whereas Candidate 0 asks about the policy for asking questions."
+  },
+  "17": {
+    "predicted": false,
+    "reason": "The incoming question asks about the speakers, while candidate 0 asks about the date and time."
+  },
+  "18": {
+    "predicted": true,
+    "reason": "Both questions ask for the functions and features provided by the new product."
+  },
+  "19": {
+    "predicted": true,
+    "reason": "Both ask for the launch or release date of the product."
+  },
+  "20": {
+    "predicted": true,
+    "reason": "Both questions ask for the price or expected pricing of the product."
+  },
+  "21": {
+    "predicted": false,
+    "reason": "The incoming question asks for the launch date, while Candidate 0 asks about product features."
+  },
+  "22": {
+    "predicted": true,
+    "reason": "Both questions ask for the deadline or end time for submitting hackathon projects."
+  },
+  "23": {
+    "predicted": true,
+    "reason": "Both ask about the maximum number of people allowed on a hackathon team."
+  },
+  "24": {
+    "predicted": false,
+    "reason": "The submission method is different from the deadline."
+  },
+  "25": {
+    "predicted": false,
+    "reason": "The incoming question asks for the exam date, while Candidate 0 asks for the passing score."
+  },
+  "26": {
+    "predicted": false,
+    "reason": "Normalization and denormalization are opposite concepts in DBMS."
+  },
+  "27": {
+    "predicted": false,
+    "reason": "The incoming question asks for the date/time of the exam, while Candidate 0 asks about the topics covered."
+  },
+  "28": {
+    "predicted": false,
+    "reason": "Who is presenting differs from who is allowed to attend."
+  },
+  "29": {
+    "predicted": false,
+    "reason": "One asks about the existence of a recording, while the other asks about the upload location."
+  },
+  "30": {
+    "predicted": false,
+    "reason": "The product launch date and the product beta testing begin date are different events."
+  },
+  "31": {
+    "predicted": false,
+    "reason": "Cost and payment methods refer to different information."
+  },
+  "32": {
+    "predicted": false,
+    "reason": "The incoming question asks about offline use, while Candidate 0 asks about language support."
+  },
+  "33": {
+    "predicted": false,
+    "reason": "The incoming question asks for the submission deadline, while Candidate 0 asks about the judging criteria."
+  },
+  "34": {
+    "predicted": false,
+    "reason": "Team member limit differs from project submission limit."
+  },
+  "35": {
+    "predicted": false,
+    "reason": "Registration closing time differs from the date of the results announcement."
+  },
+  "36": {
+    "predicted": true,
+    "reason": "Both questions ask for the definition and purpose of a primary key in a database."
+  },
+  "37": {
+    "predicted": false,
+    "reason": "Asking for the definition of a foreign key is different from explaining how they work."
+  },
+  "38": {
+    "predicted": true,
+    "reason": "Both questions ask for the difference between the DELETE and TRUNCATE commands."
+  },
+  "39": {
+    "predicted": true,
+    "reason": "Both questions ask for the definition and meaning of a candidate key."
+  },
+  "40": {
+    "predicted": true,
+    "reason": "Both questions ask for the location where the town hall recording can be accessed."
+  },
+  "41": {
+    "predicted": true,
+    "reason": "Both ask whether remote employees are permitted to attend the town hall."
+  },
+  "42": {
+    "predicted": true,
+    "reason": "Both questions ask for the appropriate contact person for issues regarding town hall access."
+  },
+  "43": {
+    "predicted": true,
+    "reason": "Both questions ask if the product can be used without internet access, which is offline usage."
+  },
+  "44": {
+    "predicted": true,
+    "reason": "Both ask whether the product is available and usable on the Android platform."
+  },
+  "45": {
+    "predicted": true,
+    "reason": "Both ask for the location or method to submit bug reports for the product."
+  },
+  "46": {
+    "predicted": true,
+    "reason": "Both questions ask if individuals with no prior experience are eligible to participate."
+  },
+  "47": {
+    "predicted": true,
+    "reason": "Both questions ask about whether participants will receive certificates."
+  },
+  "48": {
+    "predicted": false,
+    "reason": "Asking about late submission policy is different from asking for the deadline."
+  },
+  "49": {
+    "predicted": false,
+    "reason": "Passing mark refers to the minimum score required to pass, whereas total marks worth refers to the maximum score of the exam."
+  },
+  "50": {
+    "predicted": false,
+    "reason": "Mandatory attendance for the lab is different from the minimum attendance percentage requirement for the overall course."
+  },
+  "51": {
+    "predicted": false,
+    "reason": "The incoming question asks about permission to use PostgreSQL, while Candidate 0 asks about the installation process."
+  },
+  "52": {
+    "predicted": false,
+    "reason": "Recording availability is different from remote attendance options."
+  },
+  "53": {
+    "predicted": false,
+    "reason": "Mandatory attendance is different from knowing who is invited."
+  },
+  "54": {
+    "predicted": false,
+    "reason": "Asking if the CEO will answer questions is different from asking how employees can submit questions."
+  },
+  "55": {
+    "predicted": false,
+    "reason": "Asking whether the product supports offline mode is different from asking how to enable it."
+  },
+  "56": {
+    "predicted": false,
+    "reason": "Asking if a product is free differs from asking if it offers a free trial."
+  },
+  "57": {
+    "predicted": false,
+    "reason": "A product launch date does not necessarily mean the download availability date, as they can refer to different milestones."
+  },
+  "58": {
+    "predicted": false,
+    "reason": "Participation eligibility differs from prize eligibility for beginners."
+  },
+  "59": {
+    "predicted": false,
+    "reason": "The incoming question asks about the team size limit, while Candidate 0 asks about changing teams after registration."
+  },
+  "60": {
+    "predicted": false,
+    "reason": "The incoming question asks about database normalization, while Candidate 0 asks about annual revenue."
+  },
+  "61": {
+    "predicted": false,
+    "reason": "The incoming question asks about database concepts while the candidate asks about an event time."
+  },
+  "62": {
+    "predicted": false,
+    "reason": "The incoming question asks about SQL indexing, whereas Candidate 0 asks about product subscription plans."
+  },
+  "63": {
+    "predicted": false,
+    "reason": "The incoming question asks about database transactions, while Candidate 0 asks about the hackathon venue."
+  },
+  "64": {
+    "predicted": false,
+    "reason": "The incoming question asks about the date of the town hall, whereas Candidate 0 asks how to write a SQL query."
+  },
+  "65": {
+    "predicted": false,
+    "reason": "The incoming question asks about the CEO, while candidate 0 asks about database normalization. They have completely different intents."
+  },
+  "66": {
+    "predicted": false,
+    "reason": "The incoming question asks about town hall recordings, whereas Candidate 0 asks about creating a database backup."
+  },
+  "67": {
+    "predicted": false,
+    "reason": "The incoming question asks about product features, whereas Candidate 0 asks about normal forms in DBMS."
+  },
+  "68": {
+    "predicted": false,
+    "reason": "The incoming question asks about product cost, whereas Candidate 0 asks about hackathon judges."
+  },
+  "69": {
+    "predicted": false,
+    "reason": "The incoming question asks about Android support, while Candidate 0 asks about the DBMS examination."
+  },
+  "70": {
+    "predicted": false,
+    "reason": "The incoming question asks about the hackathon prize pool, while Candidate 0 asks about database transactions."
+  },
+  "71": {
+    "predicted": false,
+    "reason": "The incoming question asks about hackathon registration, whereas Candidate 0 asks about the company's product roadmap."
+  },
+  "72": {
+    "predicted": true,
+    "reason": "Both questions ask for the purpose and function of a foreign key in databases."
+  },
+  "73": {
+    "predicted": true,
+    "reason": "Both ask for the mechanism by which database indexes improve query speed."
+  },
+  "74": {
+    "predicted": true,
+    "reason": "Both questions ask about the effects and outcome of rolling back a transaction."
+  },
+  "75": {
+    "predicted": true,
+    "reason": "Both questions ask for the identity of the host for the upcoming town hall."
+  },
+  "76": {
+    "predicted": true,
+    "reason": "Both questions ask whether employees or staff can ask questions live during the session."
+  },
+  "77": {
+    "predicted": true,
+    "reason": "Both questions ask for the location where the town hall presentation slides are made available to employees."
+  },
+  "78": {
+    "predicted": true,
+    "reason": "Both questions ask if the product supports data export."
+  },
+  "79": {
+    "predicted": true,
+    "reason": "Both questions inquire about whether the product will have a mobile application."
+  },
+  "80": {
+    "predicted": true,
+    "reason": "Both questions ask for the permitted programming languages in the hackathon."
+  },
+  "81": {
+    "predicted": true,
+    "reason": "Both questions ask for the deadline or closing time of hackathon registration."
+  },
+  "82": {
+    "predicted": false,
+    "reason": "Results announcement time differs from prize distribution time."
+  },
+  "83": {
+    "predicted": false,
+    "reason": "They ask about using different programming languages."
+  },
+  "84": {
+    "predicted": false,
+    "reason": "The incoming question asks for the definition of database normalization, while Candidate 0 asks about hackathon winners."
+  },
+  "85": {
+    "predicted": false,
+    "reason": "The incoming question asks about SQL and NoSQL differences, while Candidate 0 asks about the town hall schedule."
+  },
+  "86": {
+    "predicted": false,
+    "reason": "The incoming question asks for the definition of a composite key, whereas Candidate 0 asks about dark mode support."
+  },
+  "87": {
+    "predicted": false,
+    "reason": "The incoming question asks about database indexing, whereas Candidate 0 asks about hackathon prize money."
+  },
+  "88": {
+    "predicted": false,
+    "reason": "The incoming question asks about the presenter of quarterly business results, while Candidate 0 asks about writing a SQL query."
+  },
+  "89": {
+    "predicted": false,
+    "reason": "The incoming question asks about remote employee attendance at a town hall, while Candidate 0 asks a technical database question about SQL commands."
+  },
+  "90": {
+    "predicted": false,
+    "reason": "The incoming question asks about accessing a town hall recording, whereas Candidate 0 asks about registering a team for a hackathon."
+  },
+  "91": {
+    "predicted": false,
+    "reason": "The incoming question asks about a product subscription price, while Candidate 0 asks about ACID properties in DBMS. They have completely different in"
+  },
+  "92": {
+    "predicted": false,
+    "reason": "The incoming question asks about language support, while Candidate 0 asks about hackathon eligibility."
+  },
+  "93": {
+    "predicted": false,
+    "reason": "The incoming question asks about the product launch date, while Candidate 0 asks about the DBMS syllabus."
+  },
+  "94": {
+    "predicted": false,
+    "reason": "The incoming question asks about the location of a hackathon, while Candidate 0 asks about an offline mode for a product."
+  },
+  "95": {
+    "predicted": false,
+    "reason": "The incoming question asks about hackathon judging criteria, while Candidate 0 asks about town hall recordings."
+  },
+  "96": {
+    "predicted": false,
+    "reason": "The incoming question asks about a database concept, while Candidate 0 asks about a company strategy announcement."
+  },
+  "97": {
+    "predicted": false,
+    "reason": "The incoming question asks about SQL joins, while Candidate 0 asks about the host of a town hall."
+  },
+  "98": {
+    "predicted": false,
+    "reason": "The incoming question asks about database normalization, while Candidate 0 asks about hackathon prize money."
+  },
+  "99": {
+    "predicted": false,
+    "reason": "The incoming question asks for the definition of a database transaction, while the candidate asks about biometric login support."
+  },
+  "100": {
+    "predicted": false,
+    "reason": "The incoming question asks about the town hall schedule, while Candidate 0 is about SQL foreign keys."
+  },
+  "101": {
+    "predicted": false,
+    "reason": "The incoming question asks about town hall speakers, while Candidate 0 asks about hackathon programming languages."
+  },
+  "102": {
+    "predicted": false,
+    "reason": "The incoming question asks about recording a town hall, while Candidate 0 asks about a subscription fee."
+  },
+  "103": {
+    "predicted": false,
+    "reason": "The incoming question asks about offline access, while candidate 0 asks about database keys."
+  },
+  "104": {
+    "predicted": false,
+    "reason": "The incoming question asks for the product launch date, while Candidate 0 asks for the hackathon location."
+  },
+  "105": {
+    "predicted": false,
+    "reason": "The incoming question asks about exporting product data, while the candidate asks about a DBMS examination syllabus."
+  },
+  "106": {
+    "predicted": false,
+    "reason": "The incoming question asks about hackathon judging criteria, while Candidate 0 asks about multi-language support."
+  },
+  "107": {
+    "predicted": false,
+    "reason": "The incoming question asks about hackathon team size, while Candidate 0 asks about the date of a company town hall."
+  },
+  "108": {
+    "predicted": true,
+    "reason": "Both ask for the objective or rationale behind database normalization."
+  },
+  "109": {
+    "predicted": true,
+    "reason": "Both ask for the location or method to view the recorded town hall session."
+  },
+  "110": {
+    "predicted": true,
+    "reason": "Both questions ask if the system supports two-factor authentication (2FA)."
+  },
+  "111": {
+    "predicted": true,
+    "reason": "Both ask for the date when hackathon results or winners will be announced."
+  },
+  "112": {
+    "predicted": false,
+    "reason": "The incoming question asks about a database schema, while Candidate 0 asks about presenters at a town hall."
+  },
+  "113": {
+    "predicted": false,
+    "reason": "The incoming question asks about SQL aggregate functions, whereas Candidate 0 asks about product pricing."
+  },
+  "114": {
+    "predicted": false,
+    "reason": "The incoming question asks for the definition of a database index, while Candidate 0 asks about hackathon registration."
+  },
+  "115": {
+    "predicted": false,
+    "reason": "The incoming question asks about the town hall host, while the candidate asks about technical database differences."
+  },
+  "116": {
+    "predicted": false,
+    "reason": "The incoming question asks about recording a town hall, while Candidate 0 asks about dark mode support in a product."
+  },
+  "117": {
+    "predicted": false,
+    "reason": "The incoming question asks about product features, while Candidate 0 asks about topics covered in a DBMS course."
+  },
+  "118": {
+    "predicted": false,
+    "reason": "The incoming question asks about Android platform compatibility, while Candidate 0 asks about hackathon eligibility."
+  },
+  "119": {
+    "predicted": false,
+    "reason": "The incoming question asks about hackathon judging criteria, while Candidate 0 asks about database transactions."
+  }
+}

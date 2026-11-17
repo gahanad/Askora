@@ -3,13 +3,29 @@ import { describe, expect, it } from "vitest";
 import { findCandidates } from "./candidates";
 import { InMemoryStore } from "./store";
 
+const createMetadata = (requestId: string) => ({
+  questionId: `question-${requestId}`,
+  authorId: "test-user",
+  requestId,
+  similarity: 1,
+});
+
 describe("findCandidates", () => {
   it("returns candidates above the similarity threshold", async () => {
     const store = new InMemoryStore();
 
-    await store.createCluster("event-1", "Question A", [1, 0]);
-    await store.createCluster("event-1", "Question B", [0.9, 0.1]);
-    await store.createCluster("event-1", "Question C", [0, 1]);
+    await store.createCluster(
+      "event-1", "Question A", [1, 0],
+      createMetadata("request-1")
+    );
+    await store.createCluster(
+      "event-1", "Question B", [0.9, 0.1],
+      createMetadata("request-2")
+    );
+    await store.createCluster(
+      "event-1", "Question C", [0, 1],
+      createMetadata("request-3")
+    );
 
     const result = await findCandidates(
       store,
@@ -25,8 +41,14 @@ describe("findCandidates", () => {
   it("returns candidates in descending similarity order", async () => {
     const store = new InMemoryStore();
 
-    await store.createCluster("event-1", "Lower match", [0.8, 0.6]);
-    await store.createCluster("event-1", "Higher match", [0.99, 0.1]);
+    await store.createCluster(
+      "event-1", "Lower match", [0.8, 0.6],
+      createMetadata("request-4")
+    );
+    await store.createCluster(
+      "event-1", "Higher match", [0.99, 0.1],
+      createMetadata("request-5")
+    );
 
     const result = await findCandidates(
       store,
@@ -45,7 +67,8 @@ describe("findCandidates", () => {
       await store.createCluster(
         "event-1",
         `Question ${i}`,
-        [1, i * 0.01]
+        [1, i * 0.01],
+        createMetadata(`request-${i + 6}`)
       );
     }
 
@@ -61,8 +84,14 @@ describe("findCandidates", () => {
   it("does not retrieve candidates from another event", async () => {
     const store = new InMemoryStore();
 
-    await store.createCluster("event-1", "Same event", [1, 0]);
-    await store.createCluster("event-2", "Other event", [1, 0]);
+    await store.createCluster(
+      "event-1", "Same event", [1, 0],
+      createMetadata("request-12")
+    );
+    await store.createCluster(
+      "event-2", "Other event", [1, 0],
+      createMetadata("request-13")
+    );
 
     const result = await findCandidates(
       store,
@@ -77,7 +106,10 @@ describe("findCandidates", () => {
   it("returns an empty array when no candidate passes the threshold", async () => {
     const store = new InMemoryStore();
 
-    await store.createCluster("event-1", "Unrelated question", [0, 1]);
+    await store.createCluster(
+      "event-1", "Unrelated question", [0, 1],
+      createMetadata("request-14")
+    );
 
     const result = await findCandidates(
       store,
@@ -91,8 +123,14 @@ describe("findCandidates", () => {
   it("supports custom threshold and candidate limit", async () => {
     const store = new InMemoryStore();
 
-    await store.createCluster("event-1", "Question A", [1, 0]);
-    await store.createCluster("event-1", "Question B", [0.9, 0.1]);
+    await store.createCluster(
+      "event-1", "Question A", [1, 0],
+      createMetadata("request-15")
+    );
+    await store.createCluster(
+      "event-1", "Question B", [0.9, 0.1],
+      createMetadata("request-16")
+    );
 
     const result = await findCandidates(
       store,
