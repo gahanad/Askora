@@ -403,7 +403,7 @@ const idempotencyKey = idempotencyKeyRef.current.key;
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-10">
       <header className="mb-8">
         <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
-          AskOnce · Live Event
+          Askora · Live Event
         </p>
         <h1 className="mt-2 text-3xl font-bold">Question Board</h1>
         <p className="mt-2 text-gray-500">
