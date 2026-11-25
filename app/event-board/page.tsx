@@ -147,7 +147,6 @@ export default function EventBoardPage() {
       try {
         // Ensuring participant has an Appwrite session.
         const user = await ensureUserSession();
-        console.log("Participant ID:", user.$id);
         await Promise.all([
           loadClusters(),
           loadVoteState(activeEventId),
@@ -235,7 +234,6 @@ export default function EventBoardPage() {
   useEffect(() => {
     async function printJWT() {
       const jwt = await getTestJWT();
-      console.log("TEST JWT:", jwt);
     }
 
     printJWT();

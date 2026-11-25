@@ -85,12 +85,6 @@ function HostEventContent() {
       }
 
       setEvent(eventData);
-      console.log("Logged-in Appwrite user:", user.$id);
-      console.log("Cluster query IDs:", {
-        databaseId,
-        clustersTableId,
-        eventId,
-      });
       const clusterResult = await tablesDB.listRows({
         databaseId,
         tableId: clustersTableId,
@@ -101,14 +95,6 @@ function HostEventContent() {
       });
 
       const rows = clusterResult.rows as unknown as Cluster[];
-      console.log(
-        "Dashboard cluster IDs:",
-        rows.map((c) => ({
-          id: c.$id,
-          title: c.title,
-          askCount: c.askCount,
-        }))
-      );
 
       rows.sort(
         (a, b) =>
@@ -308,7 +294,6 @@ useEffect(() => {
   if (!event) return null;
 
   function getQuestionsForCluster(clusterId: string) {
-    // console.log("The queestionId is: ", clusterId);
     
     const filteredQuestion = questions.filter(
       (question) => question.clusterId === clusterId

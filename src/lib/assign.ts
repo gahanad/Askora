@@ -77,12 +77,6 @@ async function assignQuestionUnlocked(
         "EMBEDDING_UNAVAILABLE: Could not generate question embedding."
       );
     }
-
-    console.log("CANDIDATE RETRIEVAL:", {
-      eventId,
-      question: text,
-      timestamp: Date.now(),
-    });
     // 2. Retrieve similar canonical questions.
     const candidates = await findCandidates(
       store,
