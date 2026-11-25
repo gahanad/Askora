@@ -73,26 +73,28 @@ flowchart TD
     H[Event Host] --> UI
 
     UI --> N[Next.js Application]
-
     N --> API[Next.js API Routes]
 
-    API --> A[Appwrite Backend]
+    API --> RL[Upstash Redis<br/>Distributed Locking]
 
-    A --> T[TablesDB]
-    A --> D[DocumentsDB]
-    A --> V[VectorsDB]
-    A --> F[Appwrite Functions]
+    RL --> EP[Embedding Generation]
+    EP --> CR[Candidate Retrieval]
+    CR --> LJ[LLM Semantic Judging]
 
-    API --> E[Embedding Generation]
+    LJ --> G[Groq - Primary LLM]
+    LJ --> GM[Gemini - Fallback LLM]
 
-    E --> S[Semantic Similarity]
-    S --> C[Question Clustering]
+    G --> CA[Cluster Assignment]
+    GM --> CA
 
-    C --> T
-    T --> B[Live Question Board]
+    CA --> DB[Appwrite TablesDB]
 
-    B --> H
-    B --> P
+    DB --> LB[Live Question Board]
+    LB --> P
+    LB --> H
+
+    H --> MOD[Question Moderation<br/>and Answer Management]
+    MOD --> DB
 ```
 
 ### 🏗️ Architecture Overview
