@@ -91,7 +91,7 @@ export default function JoinEventPage() {
         <section className="mt-5 rounded-xl border p-4">
           <h2 className="text-xl font-semibold">{eventTitle}</h2>
           <p className="mt-2 text-sm text-gray-500">
-            You're in! The question submission screen comes next.
+            You&apos;re in! The question submission screen comes next.
           </p>
         </section>
       )}

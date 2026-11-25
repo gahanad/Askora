@@ -65,7 +65,10 @@ export default function EventBoardPage() {
     const eventId = new URLSearchParams(window.location.search).get("eventId");
 
     if (eventId) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setEventInput(eventId);
+
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setActiveEventId(eventId);
     }
   }, []);

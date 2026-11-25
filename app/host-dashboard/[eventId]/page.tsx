@@ -63,7 +63,9 @@ function HostEventContent() {
   const [questions, setQuestions] = useState<Question[]>([]);
 
   const clustersRef = useRef<Cluster[]>([]);
-  clustersRef.current = clusters;
+  useEffect(() => {
+    clustersRef.current = clusters;
+  }, [clusters]);
 
   async function loadEventData() {
     setLoading(true);
@@ -222,9 +224,13 @@ function HostEventContent() {
   }
 
   useEffect(() => {
-    if (eventId) {
+    if (!eventId) return;
+
+    const timer = setTimeout(() => {
       void loadEventData();
-    }
+    }, 0);
+
+    return () => clearTimeout(timer);
   }, [eventId]);
 useEffect(() => {
   if (!eventId || !event) return;

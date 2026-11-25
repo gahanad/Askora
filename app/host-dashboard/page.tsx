@@ -76,7 +76,11 @@ export default function HostDashboard() {
 
   // Load events when dashboard opens
   useEffect(() => {
-    void loadEvents();
+    const timer = setTimeout(() => {
+      void loadEvents();
+    }, 0);
+
+    return () => clearTimeout(timer);
   }, []);
 
   // Create a new event
