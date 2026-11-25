@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useEffect, useState, Suspense } from "react";
+import { useEffect, useState, Suspense, useRef } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { account, tablesDB, getAppwriteJWT, client} from "@/lib/appwrite";
@@ -62,6 +62,9 @@ function HostEventContent() {
   const [answerLoadingId, setAnswerLoadingId] = useState("");
   const [questions, setQuestions] = useState<Question[]>([]);
 
+  const clustersRef = useRef<Cluster[]>([]);
+  clustersRef.current = clusters;
+
   async function loadEventData() {
     setLoading(true);
     setError("");
@@ -98,6 +101,14 @@ function HostEventContent() {
       });
 
       const rows = clusterResult.rows as unknown as Cluster[];
+      console.log(
+        "Dashboard cluster IDs:",
+        rows.map((c) => ({
+          id: c.$id,
+          title: c.title,
+          askCount: c.askCount,
+        }))
+      );
 
       rows.sort(
         (a, b) =>
@@ -106,17 +117,35 @@ function HostEventContent() {
       );
 
       setClusters(rows);
-      const questionResult = await tablesDB.listRows({
-        databaseId,
-        tableId: questionsTableId,
-        queries: [
-          Query.equal("eventId", eventId),
-          Query.limit(100),
-        ],
-      });
+      // Fetch ALL questions using pagination
+      let loadedQuestions: Question[] = [];
+      let offset = 0;
+      const batchSize = 100;
 
-      setQuestions(questionResult.rows as unknown as Question[]);
-      console.log("Loaded questions:", questionResult.rows);
+      while (true) {
+        const questionResult = await tablesDB.listRows({
+          databaseId,
+          tableId: questionsTableId,
+          queries: [
+            Query.equal("eventId", eventId),
+            Query.limit(batchSize),
+            Query.offset(offset),
+          ],
+        });
+
+        const fetchedRows = questionResult.rows as unknown as Question[];
+
+        loadedQuestions = [...loadedQuestions, ...fetchedRows];
+
+        if (fetchedRows.length < batchSize) {
+          break;
+        }
+
+        offset += batchSize;
+      }
+      setQuestions(loadedQuestions);
+      const clusterIds = new Set(rows.map((c) => c.$id));
+
     } catch (err) {
       setError(
         err instanceof Error
@@ -211,32 +240,49 @@ function HostEventContent() {
       void loadEventData();
     }
   }, [eventId]);
-
-  useEffect(() => {
-    if (!eventId || !event) return;
-
-    const unsubscribe = client.subscribe(
+useEffect(() => {
+  if (!eventId || !event) return;
+  const unsubscribe = client.subscribe(
     [
       `databases.${databaseId}.tables.${clustersTableId}.rows`,
       `databases.${databaseId}.tables.${questionsTableId}.rows`,
-      `databases.${databaseId}.tables.${votesTableId}.rows`,
     ],
     (response) => {
-      const payload = response.payload as {
+      const payload = response.payload as Partial<Cluster> & {
         eventId?: string;
-        clusterId?: string;
       };
 
-      if (payload.eventId === eventId) {
+      if (payload.eventId !== eventId) return;
+
+      const existingCluster = clustersRef.current.find(
+        (cluster) => cluster.$id === payload.$id
+      );
+
+      // New cluster: refresh the dashboard.
+      if (!existingCluster) {
+        void loadEventData();
+        return;
+      }
+
+      // Ignore vote-count-only changes.
+      // Refresh for changes that matter to the host.
+      const importantChange =
+        existingCluster.title !== payload.title ||
+        existingCluster.askCount !== payload.askCount ||
+        existingCluster.status !== payload.status ||
+        existingCluster.answerText !== payload.answerText;
+
+      if (importantChange) {
         void loadEventData();
       }
     }
   );
 
-    return () => {
-      unsubscribe();
-    };
-  }, [eventId, event]);
+  return () => {
+    unsubscribe();
+  };
+}, [eventId, event]);
+
 
   if (loading) {
     return (
@@ -262,9 +308,12 @@ function HostEventContent() {
   if (!event) return null;
 
   function getQuestionsForCluster(clusterId: string) {
-    return questions.filter(
+    // console.log("The queestionId is: ", clusterId);
+    
+    const filteredQuestion = questions.filter(
       (question) => question.clusterId === clusterId
     );
+    return filteredQuestion;
   }
 
   async function moderateQuestion(questionId: string) {
@@ -304,7 +353,7 @@ function HostEventContent() {
       );
     }
   }
-
+  
   return (
     <main className="mx-auto max-w-5xl p-6">
       <Link
@@ -471,7 +520,8 @@ function HostEventContent() {
           </div>
         ) : (
           <div className="mt-5 space-y-4">
-            {clusters.map((cluster, index) => (
+            {clusters.map((cluster, index) => {
+              return(
               <div key={cluster.$id} className="rounded-xl border p-5">
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div className="flex gap-3">
@@ -488,6 +538,7 @@ function HostEventContent() {
                       </p>
                     </div>
                   </div>
+                  
                   {/* Original questions dropdown */}
                   <details className="mt-4 rounded-lg border border-gray-700">
                     <summary className="cursor-pointer rounded-lg px-4 py-3 text-sm font-semibold text-gray-300 hover:bg-gray-900">
@@ -599,7 +650,8 @@ function HostEventContent() {
                   </div>
                 )}
               </div>
-            ))}
+              );
+            })}
           </div>
         )}
       </section>

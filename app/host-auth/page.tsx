@@ -4,8 +4,11 @@
 import { FormEvent, useState } from "react";
 import { ID } from "appwrite";
 import { account } from "@/lib/appwrite";
+import { useRouter } from "next/navigation";
 
 export default function HostAuthPage() {
+  const router = useRouter();
+
   const [mode, setMode] = useState<"signup" | "login">("signup");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -36,6 +39,9 @@ export default function HostAuthPage() {
       const user = await account.get();
 
       setMessage(`Signed in successfully as ${user.name || user.email}.`);
+
+      // Redirect to Host Dashboard after successful authentication
+      router.replace("/host-dashboard");
     } catch (error) {
       setMessage(
         error instanceof Error ? error.message : "Authentication failed."
@@ -57,6 +63,7 @@ export default function HostAuthPage() {
         >
           Sign up
         </button>
+
         <button
           type="button"
           onClick={() => setMode("login")}

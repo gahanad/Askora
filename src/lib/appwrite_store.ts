@@ -184,6 +184,33 @@ export class AppwriteStore implements ClusterStore {
   });
 }
 
+  async getQuestionById(
+    questionId: string
+  ): Promise<AppwriteRow | null> {
+    try {
+      const question = await this.tablesDB.getRow({
+        databaseId: this.databaseId,
+        tableId: this.questionsTableId,
+        rowId: questionId,
+      });
+
+      return question as AppwriteRow;
+    } catch (error) {
+      const appwriteError = error as {
+        code?: number;
+        status?: number;
+      };
+
+      const status = appwriteError.code ?? appwriteError.status;
+
+      if (status === 404) {
+        return null;
+      }
+
+      throw error;
+    }
+  }
+
   async getCanonicals(
     eventId: string
   ): Promise<CanonicalQuestion[]> {

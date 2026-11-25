@@ -3,6 +3,7 @@ import { generateEmbedding } from "./embed";
 import { findCandidates } from "./candidates";
 import { conflictingFacts } from "./guard";
 import { judge } from "./judge";
+import { withDistributedLock } from "./distributed_lock";
 import type { ClusterStore, QuestionMetadata } from "./store";
 
 type AssignmentDependencies = {
@@ -26,8 +27,7 @@ export type AssignmentResult = {
     | "judge_failed";
   reason: string;
 };
-
-export async function assignQuestion(
+async function assignQuestionUnlocked(
   store: ClusterStore,
   eventId: string,
   text: string,
@@ -70,14 +70,19 @@ export async function assignQuestion(
 
     try {
       vector = await dependencies.embed(text);
-    } catch {
-      return await createNewCluster(
-        [],
-        "embedding_failed",
-        "Embedding generation failed."
+    } catch (error) {
+      console.error("Embedding generation failed:", error);
+
+      throw new Error(
+        "EMBEDDING_UNAVAILABLE: Could not generate question embedding."
       );
     }
 
+    console.log("CANDIDATE RETRIEVAL:", {
+      eventId,
+      question: text,
+      timestamp: Date.now(),
+    });
     // 2. Retrieve similar canonical questions.
     const candidates = await findCandidates(
       store,
@@ -85,6 +90,16 @@ export async function assignQuestion(
       vector,
       { k: 5, minScore: 0.70 }
     );
+
+    console.log("CANDIDATES FOUND:", {
+      eventId,
+      count: candidates.length,
+      candidates: candidates.map(c => ({
+        clusterId: c.clusterId,
+        score: c.score,
+        text: c.text,
+      })),
+    });
 
     if (candidates.length === 0) {
       return await createNewCluster(
@@ -107,7 +122,7 @@ export async function assignQuestion(
       );
     }
 
-    // 4. Ask Gemini to judge the remaining candidates.
+    // 4. Ask the LLM judge to evaluate the remaining candidates.
     let judgment;
 
     try {
@@ -118,19 +133,17 @@ export async function assignQuestion(
           text: candidate.text,
         }))
       );
-    } catch {
-      return await createNewCluster(
-        vector,
-        "judge_failed",
-        "Intent judge failed."
+    } catch (error) {
+      console.error("Intent judge failed:", error);
+
+      throw new Error(
+        "JUDGE_UNAVAILABLE: Intent evaluation failed."
       );
     }
 
     if (judgment.reason === "judge_unavailable") {
-      return await createNewCluster(
-        vector,
-        "judge_failed",
-        "Gemini judge was unavailable."
+      throw new Error(
+        "JUDGE_UNAVAILABLE: All LLM judge providers failed."
       );
     }
 
@@ -139,10 +152,8 @@ export async function assignQuestion(
       const matchedCandidate = safeCandidates[judgment.match];
 
       if (!matchedCandidate) {
-        return await createNewCluster(
-          vector,
-          "judge_no_match",
-          "Judge returned an invalid candidate."
+        throw new Error(
+          "JUDGE_UNAVAILABLE: Judge returned an invalid candidate index."
         );
       }
 
@@ -181,4 +192,28 @@ export async function assignQuestion(
       })
     );
   }
+}
+
+
+export async function assignQuestion(
+  store: ClusterStore,
+  eventId: string,
+  text: string,
+  metadata: SubmissionMetadata,
+  dependencies: AssignmentDependencies = {
+    embed: generateEmbedding,
+    judge,
+  }
+): Promise<AssignmentResult> {
+  return withDistributedLock(
+    `event:${eventId}:assignment`,
+    () =>
+      assignQuestionUnlocked(
+        store,
+        eventId,
+        text,
+        metadata,
+        dependencies
+      )
+  );
 }

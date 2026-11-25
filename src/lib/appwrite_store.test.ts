@@ -341,4 +341,47 @@ describe("AppwriteStore", () => {
         })
     );
     });
+
+  it("retrieves an existing question by its ID", async () => {
+    getRow.mockResolvedValue({
+      $id: "question-1",
+      eventId: "event-1",
+      clusterId: "cluster-1",
+      text: "When is the exam?",
+      similarity: 1,
+      authorId: "user-1",
+      requestId: "request-1",
+    });
+
+    const store = new AppwriteStore();
+
+    const result = await store.getQuestionById("question-1");
+
+    expect(result).toEqual(
+      expect.objectContaining({
+        $id: "question-1",
+        clusterId: "cluster-1",
+        text: "When is the exam?",
+      })
+    );
+
+    expect(getRow).toHaveBeenCalledWith({
+      databaseId: "test-db",
+      tableId: "questions",
+      rowId: "question-1",
+    });
+  });
+
+  it("returns null when a question does not exist", async () => {
+    getRow.mockRejectedValue({
+      code: 404,
+      message: "Row not found",
+    });
+
+    const store = new AppwriteStore();
+
+    const result = await store.getQuestionById("missing-question");
+
+    expect(result).toBeNull();
+  });
 });

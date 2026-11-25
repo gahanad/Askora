@@ -1,5 +1,12 @@
-
 import { beforeEach, describe, expect, it, vi } from "vitest";
+
+vi.mock("./distributed_lock", () => ({
+  withDistributedLock: async <T>(
+    _lockKey: string,
+    task: () => Promise<T>
+  ): Promise<T> => task(),
+}));
+
 import { assignQuestion } from "./assign";
 import { InMemoryStore } from "./store";
 
@@ -26,29 +33,25 @@ describe("assignQuestion", () => {
     });
   });
 
-  it("creates a cluster when embedding generation fails", async () => {
+  it("does not create a cluster when embedding generation fails", async () => {
     embed.mockRejectedValue(new Error("Embedding failed"));
 
-    const result = await assignQuestion(
-      store,
-      "event-1",
-      "When is the exam?",
-      metadata,
-      { embed, judge }
-    );
+    await expect(
+      assignQuestion(
+        store,
+        "event-1",
+        "When is the exam?",
+        metadata,
+        { embed, judge }
+      )
+    ).rejects.toThrow("EMBEDDING_UNAVAILABLE");
 
-    expect(result.decision).toBe("CREATED");
-    expect(result.stage).toBe("embedding_failed");
-    expect(result.questionId).toBe(metadata.questionId);
-    expect(result.similarity).toBe(1);
     expect(embed).toHaveBeenCalledTimes(1);
     expect(judge).not.toHaveBeenCalled();
 
     const canonicals = await store.getCanonicals("event-1");
 
-    expect(canonicals).toHaveLength(1);
-    expect(canonicals[0].text).toBe("When is the exam?");
-    expect(canonicals[0].vector).toEqual([]);
+    expect(canonicals).toHaveLength(0);
   });
 
   it("creates a cluster when no candidates are found", async () => {
@@ -168,7 +171,7 @@ describe("assignQuestion", () => {
     expect(result.similarity).toBe(1);
   });
 
-  it("creates a new cluster when Gemini is unavailable", async () => {
+  it("does not create a cluster when all judge providers are unavailable", async () => {
     await store.createCluster(
       "event-1",
       "When is the exam?",
@@ -185,16 +188,50 @@ describe("assignQuestion", () => {
       reason: "judge_unavailable",
     });
 
-    const result = await assignQuestion(
-      store,
+    await expect(
+      assignQuestion(
+        store,
+        "event-1",
+        "What is the exam date?",
+        metadata,
+        { embed, judge }
+      )
+    ).rejects.toThrow("JUDGE_UNAVAILABLE");
+
+    const canonicals = await store.getCanonicals("event-1");
+
+    expect(canonicals).toHaveLength(1);
+  });
+
+
+  it("does not create a cluster when the judge throws an exception", async () => {
+    await store.createCluster(
       "event-1",
-      "What is the exam date?",
-      metadata,
-      { embed, judge }
+      "When is the exam?",
+      [1, 0],
+      {
+        ...metadata,
+        questionId: "question-existing",
+        similarity: 1,
+      }
     );
 
-    expect(result.decision).toBe("CREATED");
-    expect(result.stage).toBe("judge_failed");
-    expect(result.questionId).toBe(metadata.questionId);
+    judge.mockRejectedValue(
+      new Error("LLM provider unavailable")
+    );
+
+    await expect(
+      assignQuestion(
+        store,
+        "event-1",
+        "What is the exam date?",
+        metadata,
+        { embed, judge }
+      )
+    ).rejects.toThrow("JUDGE_UNAVAILABLE");
+
+    const canonicals = await store.getCanonicals("event-1");
+
+    expect(canonicals).toHaveLength(1);
   });
 });

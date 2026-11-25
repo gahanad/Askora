@@ -17,3 +17,27 @@ export async function getAppwriteJWT() {
   const result = await account.createJWT();
   return result.jwt;
 }
+
+
+export async function ensureUserSession() {
+  try {
+    // Reuse an existing authenticated or anonymous session.
+    const user = await account.get();
+    return user;
+  } catch {
+    // No valid session: create an anonymous one.
+    await account.createAnonymousSession();
+
+    // Retrieve the newly created user's details.
+    const user = await account.get();
+    return user;
+  }
+}
+
+export async function getTestJWT() {
+  await ensureUserSession();
+
+  const result = await account.createJWT();
+
+  return result.jwt;
+}

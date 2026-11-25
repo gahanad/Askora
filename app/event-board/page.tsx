@@ -1,9 +1,9 @@
 "use client";
 
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import { Channel, Query, Realtime } from "appwrite";
 import { useRouter } from "next/navigation";
-import { account, client, tablesDB, getAppwriteJWT } from "@/lib/appwrite";
+import { account, client, tablesDB, getAppwriteJWT, ensureUserSession, getTestJWT} from "@/lib/appwrite";
 
 const databaseId = process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID!;
 const clustersTableId =
@@ -51,6 +51,12 @@ export default function EventBoardPage() {
     votingStatus: "not_started",
     eventStatus: "live",
   });
+
+  const idempotencyKeyRef = useRef<{
+    eventId: string;
+    text: string;
+    key: string;
+  } | null>(null);
 
   const [votingClusterId, setVotingClusterId] = useState("");
 
@@ -139,6 +145,9 @@ export default function EventBoardPage() {
 
     async function startRealtime() {
       try {
+        // Ensuring participant has an Appwrite session.
+        const user = await ensureUserSession();
+        console.log("Participant ID:", user.$id);
         await Promise.all([
           loadClusters(),
           loadVoteState(activeEventId),
@@ -155,10 +164,28 @@ export default function EventBoardPage() {
 
             const payload = response.payload as Partial<Cluster>;
 
-            if (payload.eventId === activeEventId) {
-              void loadClusters();
-              void loadVoteState(activeEventId);
+            if (payload.eventId !== activeEventId || !payload.$id) {
+              return;
             }
+            setClusters((previousClusters) => {
+              const clusterExists = previousClusters.some(
+                (cluster) => cluster.$id === payload.$id
+              );
+
+              if (!clusterExists) {
+                // A new question cluster was created.
+                // Load the list to include it.
+                void loadClusters();
+                return previousClusters;
+              }
+
+              // Update only the cluster that changed.
+              return previousClusters.map((cluster) =>
+                cluster.$id === payload.$id
+                  ? { ...cluster, ...payload }
+                  : cluster
+              );
+            });
           }
         );
 
@@ -171,7 +198,6 @@ export default function EventBoardPage() {
             if (cancelled) return;
 
             const payload = response.payload as Record<string, unknown>;
-
             if (payload.$id === activeEventId) {
               void loadVoteState(activeEventId);
             }
@@ -205,6 +231,15 @@ export default function EventBoardPage() {
       void eventSubscription?.unsubscribe();
     };
   }, [activeEventId]);
+
+  useEffect(() => {
+    async function printJWT() {
+      const jwt = await getTestJWT();
+      console.log("TEST JWT:", jwt);
+    }
+
+    printJWT();
+  }, []);
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -278,6 +313,19 @@ export default function EventBoardPage() {
 
     const text = questionText.trim();
 
+    if (
+      !idempotencyKeyRef.current ||
+      idempotencyKeyRef.current.eventId !== activeEventId ||
+      idempotencyKeyRef.current.text !== text
+    ) {
+      idempotencyKeyRef.current = {
+        eventId: activeEventId,
+        text,
+        key: crypto.randomUUID(),
+      };
+    }
+
+const idempotencyKey = idempotencyKeyRef.current.key;
     if (!activeEventId || !text || isSubmittingQuestion) return;
 
     setIsSubmittingQuestion(true);
@@ -292,6 +340,7 @@ export default function EventBoardPage() {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${jwt}`,
+          "Idempotency-Key": idempotencyKey,
         },
         body: JSON.stringify({
           eventId: activeEventId,
@@ -327,6 +376,8 @@ export default function EventBoardPage() {
       }
 
       setQuestionText("");
+
+      idempotencyKeyRef.current = null;
 
       // Refresh participant vote state.
       await loadVoteState(activeEventId);
