@@ -7,11 +7,6 @@ Askora is a real-time Q&A platform designed for live events, classrooms, hackath
 🌐 **Live Demo:** [https://askora-nu.vercel.app](https://askora-nu.vercel.app)
 
 ---
-
-## 📸 Screenshots
-
-\<!-- Replace these paths with actual screenshots saved inside the screenshots/ folder -->
-
 ### Host Dashboard
 
 <img width="592" height="499" alt="image" src="https://github.com/user-attachments/assets/55ba8ac5-8648-4f97-a45a-d0c7802a2cbd" />
